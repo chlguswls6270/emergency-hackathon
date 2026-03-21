@@ -1,0 +1,13 @@
+[
+  { "teamCode": "T-ALPHA", "hackathonSlug": "aimers-8-model-lite", "name": "Team Alpha", "isOpen": true, "lookingFor": ["Backend", "ML Engineer"], "intro": "추론 최적화 실험 진행할 분!", "contact": { "url": "https://open.kakao.com/o/1" } },
+  { "teamCode": "T-BETA", "hackathonSlug": "aimers-8-model-lite", "name": "ModelShrinkers", "isOpen": false, "lookingFor": [], "intro": "풀스택 팀 모두 모집 완료.", "contact": { "url": "https://open.kakao.com/o/2" } },
+  { "teamCode": "T-IDEA", "hackathonSlug": "monthly-vibe-coding-2026-02", "name": "PromptRunners", "isOpen": true, "lookingFor": ["Frontend", "Designer"], "intro": "바이브 코딩 UX 기획", "contact": { "url": "https://open.kakao.com/o/3" } },
+  { "teamCode": "T-DAKER-1", "hackathonSlug": "daker-handover-2026-03", "name": "404found", "isOpen": true, "lookingFor": ["Frontend", "Designer"], "intro": "명세서를 UI로 빠르게 만들 프론트, 디자인 구함", "contact": { "url": "https://open.kakao.com/o/4" } },
+  { "teamCode": "T-DAKER-2", "hackathonSlug": "daker-handover-2026-03", "name": "LGTM", "isOpen": false, "lookingFor": [], "intro": "개발 완료 단계입니다.", "contact": { "url": "https://open.kakao.com/o/5" } },
+  { "teamCode": "T-DAKER-3", "hackathonSlug": "daker-handover-2026-03", "name": "VercelPros", "isOpen": true, "lookingFor": ["Next.js Dev"], "intro": "Vercel 배포 경험자 환영", "contact": { "url": "https://open.kakao.com/o/6" } },
+  { "teamCode": "T-FIN-1", "hackathonSlug": "fintech-innovation-2026", "name": "PayStream", "isOpen": true, "lookingFor": ["Backend API"], "intro": "오픈 API 연결할 백엔드 구함", "contact": { "url": "https://open.kakao.com/o/7" } },
+  { "teamCode": "T-FIN-2", "hackathonSlug": "fintech-innovation-2026", "name": "SaveMore", "isOpen": false, "lookingFor": [], "intro": "모집 마감", "contact": { "url": "https://open.kakao.com/o/8" } },
+  { "teamCode": "T-GREEN-1", "hackathonSlug": "green-earth-hack-2026", "name": "EcoWarriors", "isOpen": true, "lookingFor": ["Data Scientist", "IoT"], "intro": "센서 데이터 분석가 구합니다.", "contact": { "url": "https://open.kakao.com/o/9" } },
+  { "teamCode": "T-GREEN-2", "hackathonSlug": "green-earth-hack-2026", "name": "ZeroWasteApp", "isOpen": true, "lookingFor": ["Flutter/React Native"], "intro": "앱 개발자 모십니다.", "contact": { "url": "https://open.kakao.com/o/10" } },
+  { "teamCode": "T-WEB3-1", "hackathonSlug": "web3-defi-summer", "name": "BlockGeeks", "isOpen": false, "lookingFor": [], "intro": "우승 목표 달성 팀", "contact": { "url": "https://open.kakao.com/o/11" } }
+]

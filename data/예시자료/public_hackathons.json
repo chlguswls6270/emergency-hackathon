@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "aimers-8-model-lite",
+    "title": "Aimers 8기 : 모델 경량화 온라인 해커톤",
+    "status": "ended",
+    "tags": ["LLM", "Compression", "vLLM", "AI"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
+    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-02-25T10:00:00+09:00", "endAt": "2026-02-26T10:00:00+09:00" },
+    "links": { "detail": "/hackathons/aimers-8-model-lite", "rules": "#", "faq": "#" }
+  },
+  {
+    "slug": "monthly-vibe-coding-2026-02",
+    "title": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전",
+    "status": "ongoing",
+    "tags": ["Idea", "GenAI", "Workflow"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600",
+    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-03-25T10:00:00+09:00", "endAt": "2026-03-30T10:00:00+09:00" },
+    "links": { "detail": "/hackathons/monthly-vibe-coding-2026-02", "rules": "#", "faq": "#" }
+  },
+  {
+    "slug": "daker-handover-2026-03",
+    "title": "긴급 인수인계 해커톤: 명세서만 보고 구현하라",
+    "status": "upcoming",
+    "tags": ["VibeCoding", "Web", "Vercel", "Handover"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
+    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-04-10T10:00:00+09:00", "endAt": "2026-04-27T10:00:00+09:00" },
+    "links": { "detail": "/hackathons/daker-handover-2026-03", "rules": "#", "faq": "#" }
+  },
+  {
+    "slug": "fintech-innovation-2026",
+    "title": "FinTech Future: 오픈 API 해커톤",
+    "status": "ongoing",
+    "tags": ["FinTech", "API", "React", "Mobile"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=600",
+    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-03-22T10:00:00+09:00", "endAt": "2026-03-25T10:00:00+09:00" },
+    "links": { "detail": "/hackathons/fintech-innovation-2026", "rules": "#", "faq": "#" }
+  },
+  {
+    "slug": "green-earth-hack-2026",
+    "title": "Green Earth Hackathon: 지속가능한 기술",
+    "status": "upcoming",
+    "tags": ["ClimateTech", "IoT", "Data"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=600",
+    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-05-10T10:00:00+09:00", "endAt": "2026-05-15T10:00:00+09:00" },
+    "links": { "detail": "/hackathons/green-earth-hack-2026", "rules": "#", "faq": "#" }
+  },
+  {
+    "slug": "web3-defi-summer",
+    "title": "Web3 DeFi Summer Hackathon",
+    "status": "ended",
+    "tags": ["Web3", "Blockchain", "Solidity"],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1639762681485-074b7f4fc225?auto=format&fit=crop&q=80&w=600",
+    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2025-08-10T10:00:00+09:00", "endAt": "2025-08-15T10:00:00+09:00" },
+    "links": { "detail": "/hackathons/web3-defi-summer", "rules": "#", "faq": "#" }
+  }
+]
