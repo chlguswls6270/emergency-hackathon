@@ -3,54 +3,549 @@
     "slug": "aimers-8-model-lite",
     "title": "Aimers 8기 : 모델 경량화 온라인 해커톤",
     "status": "ended",
-    "tags": ["LLM", "Compression", "vLLM", "AI"],
+    "tags": [
+      "LLM",
+      "Compression",
+      "vLLM",
+      "AI"
+    ],
     "thumbnailUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
-    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-02-25T10:00:00+09:00", "endAt": "2026-02-26T10:00:00+09:00" },
-    "links": { "detail": "/hackathons/aimers-8-model-lite", "rules": "#", "faq": "#" }
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-02-25T10:00:00+09:00",
+      "endAt": "2026-02-26T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/aimers-8-model-lite",
+      "rules": "#",
+      "faq": "#"
+    }
   },
   {
     "slug": "monthly-vibe-coding-2026-02",
     "title": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전",
     "status": "ongoing",
-    "tags": ["Idea", "GenAI", "Workflow"],
+    "tags": [
+      "Idea",
+      "GenAI",
+      "Workflow"
+    ],
     "thumbnailUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600",
-    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-03-25T10:00:00+09:00", "endAt": "2026-03-30T10:00:00+09:00" },
-    "links": { "detail": "/hackathons/monthly-vibe-coding-2026-02", "rules": "#", "faq": "#" }
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-25T10:00:00+09:00",
+      "endAt": "2026-03-30T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/monthly-vibe-coding-2026-02",
+      "rules": "#",
+      "faq": "#"
+    }
   },
   {
     "slug": "daker-handover-2026-03",
     "title": "긴급 인수인계 해커톤: 명세서만 보고 구현하라",
     "status": "upcoming",
-    "tags": ["VibeCoding", "Web", "Vercel", "Handover"],
+    "tags": [
+      "VibeCoding",
+      "Web",
+      "Vercel",
+      "Handover"
+    ],
     "thumbnailUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
-    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-04-10T10:00:00+09:00", "endAt": "2026-04-27T10:00:00+09:00" },
-    "links": { "detail": "/hackathons/daker-handover-2026-03", "rules": "#", "faq": "#" }
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-04-10T10:00:00+09:00",
+      "endAt": "2026-04-27T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/daker-handover-2026-03",
+      "rules": "#",
+      "faq": "#"
+    }
   },
   {
     "slug": "fintech-innovation-2026",
     "title": "FinTech Future: 오픈 API 해커톤",
     "status": "ongoing",
-    "tags": ["FinTech", "API", "React", "Mobile"],
+    "tags": [
+      "FinTech",
+      "API",
+      "React",
+      "Mobile"
+    ],
     "thumbnailUrl": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=600",
-    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-03-22T10:00:00+09:00", "endAt": "2026-03-25T10:00:00+09:00" },
-    "links": { "detail": "/hackathons/fintech-innovation-2026", "rules": "#", "faq": "#" }
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-22T10:00:00+09:00",
+      "endAt": "2026-03-25T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/fintech-innovation-2026",
+      "rules": "#",
+      "faq": "#"
+    }
   },
   {
     "slug": "green-earth-hack-2026",
     "title": "Green Earth Hackathon: 지속가능한 기술",
     "status": "upcoming",
-    "tags": ["ClimateTech", "IoT", "Data"],
+    "tags": [
+      "ClimateTech",
+      "IoT",
+      "Data"
+    ],
     "thumbnailUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=600",
-    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2026-05-10T10:00:00+09:00", "endAt": "2026-05-15T10:00:00+09:00" },
-    "links": { "detail": "/hackathons/green-earth-hack-2026", "rules": "#", "faq": "#" }
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-05-10T10:00:00+09:00",
+      "endAt": "2026-05-15T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/green-earth-hack-2026",
+      "rules": "#",
+      "faq": "#"
+    }
   },
   {
     "slug": "web3-defi-summer",
     "title": "Web3 DeFi Summer Hackathon",
     "status": "ended",
-    "tags": ["Web3", "Blockchain", "Solidity"],
+    "tags": [
+      "Web3",
+      "Blockchain",
+      "Solidity"
+    ],
     "thumbnailUrl": "https://images.unsplash.com/photo-1639762681485-074b7f4fc225?auto=format&fit=crop&q=80&w=600",
-    "period": { "timezone": "Asia/Seoul", "submissionDeadlineAt": "2025-08-10T10:00:00+09:00", "endAt": "2025-08-15T10:00:00+09:00" },
-    "links": { "detail": "/hackathons/web3-defi-summer", "rules": "#", "faq": "#" }
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2025-08-10T10:00:00+09:00",
+      "endAt": "2025-08-15T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/web3-defi-summer",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "edtech-vision-2026",
+    "title": "EdTech Vision: 교육의 미래 해커톤",
+    "status": "upcoming",
+    "tags": [
+      "EdTech",
+      "Education",
+      "AI"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-06-15T10:00:00+09:00",
+      "endAt": "2026-06-20T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/edtech-vision-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "health-med-ai-2026",
+    "title": "메디텍 AI 헬스케어 해커톤",
+    "status": "ongoing",
+    "tags": [
+      "HealthTech",
+      "MedTech",
+      "AI"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-24T10:00:00+09:00",
+      "endAt": "2026-03-28T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/health-med-ai-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "game-jam-indie-2026",
+    "title": "2026 인디 게임잼 페스티벌",
+    "status": "ended",
+    "tags": [
+      "Game",
+      "Unity",
+      "Unreal"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-01-15T10:00:00+09:00",
+      "endAt": "2026-01-20T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/game-jam-indie-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "cybersec-defense-2026",
+    "title": "사이버보안 방어기제 해커톤",
+    "status": "upcoming",
+    "tags": [
+      "Security",
+      "Network",
+      "Hacking"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-07-01T10:00:00+09:00",
+      "endAt": "2026-07-10T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/cybersec-defense-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "open-source-contrib-2026",
+    "title": "오픈소스 기여톤 (Contribthon)",
+    "status": "ongoing",
+    "tags": [
+      "OpenSource",
+      "GitHub",
+      "Community"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-29T10:00:00+09:00",
+      "endAt": "2026-04-05T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/open-source-contrib-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "data-science-climate-2026",
+    "title": "기후변화 대응 데이터 사이언스",
+    "status": "upcoming",
+    "tags": [
+      "Data",
+      "Climate",
+      "Python"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1611273426858-450d8e3c9cce?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-08-10T10:00:00+09:00",
+      "endAt": "2026-08-20T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/data-science-climate-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "smart-city-mobility-2026",
+    "title": "스마트시티 모빌리티 챌린지",
+    "status": "ended",
+    "tags": [
+      "Mobility",
+      "SmartCity",
+      "Hardware"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-02-01T10:00:00+09:00",
+      "endAt": "2026-02-05T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/smart-city-mobility-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "robotics-control-2026",
+    "title": "차세대 로보틱스 제어 해커톤",
+    "status": "upcoming",
+    "tags": [
+      "Robotics",
+      "C++",
+      "ROS"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-09-01T10:00:00+09:00",
+      "endAt": "2026-09-10T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/robotics-control-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "cloud-native-devops-2026",
+    "title": "Cloud Native DevOps 대회",
+    "status": "ongoing",
+    "tags": [
+      "Cloud",
+      "DevOps",
+      "Kubernetes"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-31T10:00:00+09:00",
+      "endAt": "2026-04-02T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/cloud-native-devops-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "ar-vr-metaverse-2026",
+    "title": "AR/VR 메타버스 크리에이터톤",
+    "status": "ended",
+    "tags": [
+      "AR",
+      "VR",
+      "Metaverse"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2025-12-10T10:00:00+09:00",
+      "endAt": "2025-12-25T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/ar-vr-metaverse-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "fintech-security-2026",
+    "title": "FinTech 보안 해커톤",
+    "status": "upcoming",
+    "tags": [
+      "FinTech",
+      "Security",
+      "AI"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-07-20T10:00:00+09:00",
+      "endAt": "2026-07-25T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/fintech-security-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "smart-farm-ai-2026",
+    "title": "스마트팜 AI 챌린지",
+    "status": "ongoing",
+    "tags": [
+      "Agriculture",
+      "AI",
+      "Data"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1592982537447-6f2a6a0a0305?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-27T10:00:00+09:00",
+      "endAt": "2026-03-31T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/smart-farm-ai-2026",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "spacetech-innovators",
+    "title": "SpaceTech 혁신 해커톤",
+    "status": "upcoming",
+    "tags": [
+      "Space",
+      "Tech",
+      "Hardware"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-08-12T10:00:00+09:00",
+      "endAt": "2026-08-16T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/spacetech-innovators",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "healthcare-wearables",
+    "title": "헬스케어 웨어러블톤",
+    "status": "ended",
+    "tags": [
+      "Health",
+      "Wearables",
+      "IoT"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1550543621-e0b4aafa4f4b?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-01-05T10:00:00+09:00",
+      "endAt": "2026-01-10T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/healthcare-wearables",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "blockchain-voting",
+    "title": "블록체인 투표 시스템 해커톤",
+    "status": "upcoming",
+    "tags": [
+      "Blockchain",
+      "Web3",
+      "CivicTech"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-09-15T10:00:00+09:00",
+      "endAt": "2026-09-20T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/blockchain-voting",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "ai-ethics-challenge",
+    "title": "AI 윤리 검증 챌린지",
+    "status": "ongoing",
+    "tags": [
+      "AI",
+      "Ethics",
+      "Policy"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1531297172864-ab03770453e1?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-24T10:00:00+09:00",
+      "endAt": "2026-03-30T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/ai-ethics-challenge",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "edtech-gamification",
+    "title": "교육 게이미피케이션 모바일톤",
+    "status": "upcoming",
+    "tags": [
+      "EdTech",
+      "Game",
+      "UI"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-10-01T10:00:00+09:00",
+      "endAt": "2026-10-05T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/edtech-gamification",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "proptech-realestate",
+    "title": "프롭테크 부동산 자동화 해커톤",
+    "status": "ended",
+    "tags": [
+      "PropTech",
+      "RealEstate",
+      "Data"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2025-11-20T10:00:00+09:00",
+      "endAt": "2025-11-25T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/proptech-realestate",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "quantum-computing-101",
+    "title": "양자 컴퓨팅 입문 웹 챌린지",
+    "status": "upcoming",
+    "tags": [
+      "Quantum",
+      "Research",
+      "Physics"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-11-10T10:00:00+09:00",
+      "endAt": "2026-11-15T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/quantum-computing-101",
+      "rules": "#",
+      "faq": "#"
+    }
+  },
+  {
+    "slug": "mobility-drone-delivery",
+    "title": "드론 배송 라우팅 최적화 대회",
+    "status": "ongoing",
+    "tags": [
+      "Mobility",
+      "Drone",
+      "Algorithm"
+    ],
+    "thumbnailUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=600",
+    "period": {
+      "timezone": "Asia/Seoul",
+      "submissionDeadlineAt": "2026-03-28T10:00:00+09:00",
+      "endAt": "2026-04-03T10:00:00+09:00"
+    },
+    "links": {
+      "detail": "/hackathons/mobility-drone-delivery",
+      "rules": "#",
+      "faq": "#"
+    }
   }
 ]

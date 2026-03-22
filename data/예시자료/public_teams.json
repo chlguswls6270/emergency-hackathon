@@ -1,14 +1,3507 @@
 [
-  { "teamCode": "T-ALPHA", "hackathonSlug": "aimers-8-model-lite", "name": "Team Alpha", "isOpen": true, "lookingFor": ["Backend", "ML Engineer"], "intro": "추론 최적화 실험 진행할 분!", "contact": { "url": "https://open.kakao.com/o/1" } },
-  { "teamCode": "T-BETA", "hackathonSlug": "aimers-8-model-lite", "name": "ModelShrinkers", "isOpen": false, "lookingFor": [], "intro": "풀스택 팀 모두 모집 완료.", "contact": { "url": "https://open.kakao.com/o/2" } },
-  { "teamCode": "T-IDEA", "hackathonSlug": "monthly-vibe-coding-2026-02", "name": "PromptRunners", "isOpen": true, "lookingFor": ["Frontend", "Designer"], "intro": "바이브 코딩 UX 기획", "contact": { "url": "https://open.kakao.com/o/3" } },
-  { "teamCode": "T-DAKER-1", "hackathonSlug": "daker-handover-2026-03", "name": "404found", "isOpen": true, "lookingFor": ["Frontend", "Designer"], "intro": "명세서를 UI로 빠르게 만들 프론트, 디자인 구함", "contact": { "url": "https://open.kakao.com/o/4" } },
-  { "teamCode": "T-DAKER-2", "hackathonSlug": "daker-handover-2026-03", "name": "LGTM", "isOpen": false, "lookingFor": [], "intro": "개발 완료 단계입니다.", "contact": { "url": "https://open.kakao.com/o/5" } },
-  { "teamCode": "T-DAKER-3", "hackathonSlug": "daker-handover-2026-03", "name": "VercelPros", "isOpen": true, "lookingFor": ["Next.js Dev"], "intro": "Vercel 배포 경험자 환영", "contact": { "url": "https://open.kakao.com/o/6" } },
-  { "teamCode": "T-FIN-1", "hackathonSlug": "fintech-innovation-2026", "name": "PayStream", "isOpen": true, "lookingFor": ["Backend API"], "intro": "오픈 API 연결할 백엔드 구함", "contact": { "url": "https://open.kakao.com/o/7" } },
-  { "teamCode": "T-FIN-2", "hackathonSlug": "fintech-innovation-2026", "name": "SaveMore", "isOpen": false, "lookingFor": [], "intro": "모집 마감", "contact": { "url": "https://open.kakao.com/o/8" } },
-  { "teamCode": "T-GREEN-1", "hackathonSlug": "green-earth-hack-2026", "name": "EcoWarriors", "isOpen": true, "lookingFor": ["Data Scientist", "IoT"], "intro": "센서 데이터 분석가 구합니다.", "contact": { "url": "https://open.kakao.com/o/9" } },
-  { "teamCode": "T-GREEN-2", "hackathonSlug": "green-earth-hack-2026", "name": "ZeroWasteApp", "isOpen": true, "lookingFor": ["Flutter/React Native"], "intro": "앱 개발자 모십니다.", "contact": { "url": "https://open.kakao.com/o/10" } },
-  { "teamCode": "T-WEB3-1", "hackathonSlug": "web3-defi-summer", "name": "BlockGeeks", "isOpen": false, "lookingFor": [], "intro": "우승 목표 달성 팀", "contact": { "url": "https://open.kakao.com/o/11" } },
-  { "teamCode": "T-GLOBAL-1", "hackathonSlug": "global", "name": "Hackathon Nomads", "isOpen": true, "lookingFor": ["Any"], "intro": "We do random hackathons globally. Looking for versatile devs.", "contact": { "url": "https://open.kakao.com/o/12" } }
+  {
+    "teamCode": "T-ALPHA",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "Team Alpha",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "ML Engineer"
+    ],
+    "intro": "추론 최적화 실험 진행할 분!",
+    "contact": {
+      "url": "https://open.kakao.com/o/1"
+    }
+  },
+  {
+    "teamCode": "T-BETA",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "ModelShrinkers",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "풀스택 팀 모두 모집 완료.",
+    "contact": {
+      "url": "https://open.kakao.com/o/2"
+    }
+  },
+  {
+    "teamCode": "T-IDEA",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "PromptRunners",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Designer"
+    ],
+    "intro": "바이브 코딩 UX 기획",
+    "contact": {
+      "url": "https://open.kakao.com/o/3"
+    }
+  },
+  {
+    "teamCode": "T-DAKER-1",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "404found",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Designer"
+    ],
+    "intro": "명세서를 UI로 빠르게 만들 프론트, 디자인 구함",
+    "contact": {
+      "url": "https://open.kakao.com/o/4"
+    }
+  },
+  {
+    "teamCode": "T-DAKER-2",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "LGTM",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "개발 완료 단계입니다.",
+    "contact": {
+      "url": "https://open.kakao.com/o/5"
+    }
+  },
+  {
+    "teamCode": "T-DAKER-3",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "VercelPros",
+    "isOpen": true,
+    "lookingFor": [
+      "Next.js Dev"
+    ],
+    "intro": "Vercel 배포 경험자 환영",
+    "contact": {
+      "url": "https://open.kakao.com/o/6"
+    }
+  },
+  {
+    "teamCode": "T-FIN-1",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "PayStream",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend API"
+    ],
+    "intro": "오픈 API 연결할 백엔드 구함",
+    "contact": {
+      "url": "https://open.kakao.com/o/7"
+    }
+  },
+  {
+    "teamCode": "T-FIN-2",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "SaveMore",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "모집 마감",
+    "contact": {
+      "url": "https://open.kakao.com/o/8"
+    }
+  },
+  {
+    "teamCode": "T-GREEN-1",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "EcoWarriors",
+    "isOpen": true,
+    "lookingFor": [
+      "Data Scientist",
+      "IoT"
+    ],
+    "intro": "센서 데이터 분석가 구합니다.",
+    "contact": {
+      "url": "https://open.kakao.com/o/9"
+    }
+  },
+  {
+    "teamCode": "T-GREEN-2",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "ZeroWasteApp",
+    "isOpen": true,
+    "lookingFor": [
+      "Flutter/React Native"
+    ],
+    "intro": "앱 개발자 모십니다.",
+    "contact": {
+      "url": "https://open.kakao.com/o/10"
+    }
+  },
+  {
+    "teamCode": "T-WEB3-1",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "BlockGeeks",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "우승 목표 달성 팀",
+    "contact": {
+      "url": "https://open.kakao.com/o/11"
+    }
+  },
+  {
+    "teamCode": "T-GLOBAL-1",
+    "hackathonSlug": "global",
+    "name": "Hackathon Nomads",
+    "isOpen": true,
+    "lookingFor": [
+      "Any"
+    ],
+    "intro": "We do random hackathons globally. Looking for versatile devs.",
+    "contact": {
+      "url": "https://open.kakao.com/o/12"
+    }
+  },
+  {
+    "teamCode": "T-NEW-1",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "Team EdTech",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new0"
+    }
+  },
+  {
+    "teamCode": "T-NEW-2",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "Team HealthTech",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "메디텍 AI 헬스케어 해커톤에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new1"
+    }
+  },
+  {
+    "teamCode": "T-NEW-3",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "Team Game",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new2"
+    }
+  },
+  {
+    "teamCode": "T-NEW-4",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "Team Security",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "사이버보안 방어기제 해커톤에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new3"
+    }
+  },
+  {
+    "teamCode": "T-NEW-5",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "Team OpenSource",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon)에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new4"
+    }
+  },
+  {
+    "teamCode": "T-NEW-6",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "Team Data",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new5"
+    }
+  },
+  {
+    "teamCode": "T-NEW-7",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "Team Mobility",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new6"
+    }
+  },
+  {
+    "teamCode": "T-NEW-8",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "Team Robotics",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new7"
+    }
+  },
+  {
+    "teamCode": "T-NEW-9",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "Team Cloud",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "Cloud Native DevOps 대회에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new8"
+    }
+  },
+  {
+    "teamCode": "T-NEW-10",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "Team AR",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "AR/VR 메타버스 크리에이터톤에 참가할 멋진 팀원을 구합니다. 열정이 가장 중요합니다!",
+    "contact": {
+      "url": "https://open.kakao.com/o/new9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-0",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "오메가 크루0",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-1",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "바이브 마스터스1",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-2",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "새벽 팀2",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-3",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "알파 빌더스3",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-4",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "슈퍼 해커스4",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack",
+      "DevOps",
+      "Frontend"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-5",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "오메가 제네레이션5",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Backend"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-6",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "지니어스 러너스6",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "DevOps"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-7",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "열정 마스터스7",
+    "isOpen": false,
+    "lookingFor": [
+      "Data"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-8",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "열정 해커스8",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-0-9",
+    "hackathonSlug": "fintech-security-2026",
+    "name": "코딩 팀9",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack",
+      "PM"
+    ],
+    "intro": "FinTech 보안 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-0",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "알파 러너스0",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-1",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "지니어스 개척자들1",
+    "isOpen": true,
+    "lookingFor": [
+      "Data"
+    ],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-2",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "오메가 해커스2",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Frontend"
+    ],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-3",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "오메가 팀3",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer"
+    ],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-4",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "바이브 스쿼드4",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "PM",
+      "Fullstack"
+    ],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-5",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "새벽 개척자들5",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-6",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "슈퍼 고스트6",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "DevOps"
+    ],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-7",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "오메가 마스터스7",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-8",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "지니어스 빌더스8",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-1-9",
+    "hackathonSlug": "smart-farm-ai-2026",
+    "name": "바이브 크루9",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "스마트팜 AI 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-0",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "새벽 러너스0",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML",
+      "DevOps"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-1",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "코딩 마스터스1",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-2",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "새벽 빌더스2",
+    "isOpen": true,
+    "lookingFor": [
+      "PM"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-3",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "오메가 러너스3",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "PM"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-4",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "바이브 고스트4",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-5",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "열정 제네레이션5",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-6",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "지니어스 빌더스6",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-7",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "슈퍼 제네레이션7",
+    "isOpen": false,
+    "lookingFor": [
+      "Data"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-8",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "오메가 마스터스8",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Backend",
+      "Designer"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-2-9",
+    "hackathonSlug": "spacetech-innovators",
+    "name": "오메가 스쿼드9",
+    "isOpen": false,
+    "lookingFor": [
+      "Data"
+    ],
+    "intro": "SpaceTech 혁신 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-0",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "알파 러너스0",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-1",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "열정 스쿼드1",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-2",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "슈퍼 고스트2",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML",
+      "Frontend",
+      "PM"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-3",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "지니어스 팀3",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-4",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "새벽 마스터스4",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend",
+      "DevOps"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-5",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "열정 마스터스5",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend",
+      "DevOps"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-6",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "지니어스 팀6",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-7",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "무한 크루7",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "AI/ML",
+      "Frontend"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-8",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "알파 해커스8",
+    "isOpen": true,
+    "lookingFor": [
+      "PM"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-3-9",
+    "hackathonSlug": "healthcare-wearables",
+    "name": "알파 고스트9",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend",
+      "Fullstack"
+    ],
+    "intro": "헬스케어 웨어러블톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-0",
+    "hackathonSlug": "blockchain-voting",
+    "name": "지니어스 개척자들0",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-1",
+    "hackathonSlug": "blockchain-voting",
+    "name": "열정 크루1",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Frontend"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-2",
+    "hackathonSlug": "blockchain-voting",
+    "name": "새벽 빌더스2",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-3",
+    "hackathonSlug": "blockchain-voting",
+    "name": "새벽 제네레이션3",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "AI/ML",
+      "Designer"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-4",
+    "hackathonSlug": "blockchain-voting",
+    "name": "슈퍼 러너스4",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-5",
+    "hackathonSlug": "blockchain-voting",
+    "name": "새벽 팀5",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-6",
+    "hackathonSlug": "blockchain-voting",
+    "name": "지니어스 제네레이션6",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "DevOps"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-7",
+    "hackathonSlug": "blockchain-voting",
+    "name": "지니어스 고스트7",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "PM",
+      "Fullstack"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-8",
+    "hackathonSlug": "blockchain-voting",
+    "name": "지니어스 해커스8",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "Fullstack",
+      "PM"
+    ],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-4-9",
+    "hackathonSlug": "blockchain-voting",
+    "name": "열정 해커스9",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "블록체인 투표 시스템 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-0",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "열정 해커스0",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-1",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "오메가 팀1",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-2",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "디지털 제네레이션2",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "PM",
+      "Frontend"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-3",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "슈퍼 제네레이션3",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML",
+      "PM",
+      "Backend"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-4",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "코딩 러너스4",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "Designer"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-5",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "무한 크루5",
+    "isOpen": false,
+    "lookingFor": [
+      "Designer",
+      "Frontend",
+      "PM"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-6",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "지니어스 빌더스6",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "AI/ML",
+      "Backend"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-7",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "열정 고스트7",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-8",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "지니어스 빌더스8",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-5-9",
+    "hackathonSlug": "ai-ethics-challenge",
+    "name": "디지털 제네레이션9",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "AI 윤리 검증 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-0",
+    "hackathonSlug": "edtech-gamification",
+    "name": "열정 고스트0",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-1",
+    "hackathonSlug": "edtech-gamification",
+    "name": "알파 러너스1",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML",
+      "Fullstack",
+      "Designer"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-2",
+    "hackathonSlug": "edtech-gamification",
+    "name": "코딩 해커스2",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-3",
+    "hackathonSlug": "edtech-gamification",
+    "name": "지니어스 빌더스3",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack",
+      "Designer"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-4",
+    "hackathonSlug": "edtech-gamification",
+    "name": "바이브 개척자들4",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend",
+      "AI/ML"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-5",
+    "hackathonSlug": "edtech-gamification",
+    "name": "디지털 러너스5",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-6",
+    "hackathonSlug": "edtech-gamification",
+    "name": "코딩 해커스6",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps",
+      "Fullstack",
+      "AI/ML"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-7",
+    "hackathonSlug": "edtech-gamification",
+    "name": "알파 고스트7",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-8",
+    "hackathonSlug": "edtech-gamification",
+    "name": "바이브 러너스8",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-6-9",
+    "hackathonSlug": "edtech-gamification",
+    "name": "코딩 빌더스9",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Designer",
+      "AI/ML"
+    ],
+    "intro": "교육 게이미피케이션 모바일톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-0",
+    "hackathonSlug": "proptech-realestate",
+    "name": "새벽 빌더스0",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML"
+    ],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-1",
+    "hackathonSlug": "proptech-realestate",
+    "name": "오메가 개척자들1",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-2",
+    "hackathonSlug": "proptech-realestate",
+    "name": "새벽 제네레이션2",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-3",
+    "hackathonSlug": "proptech-realestate",
+    "name": "열정 팀3",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "Frontend",
+      "PM"
+    ],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-4",
+    "hackathonSlug": "proptech-realestate",
+    "name": "무한 제네레이션4",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-5",
+    "hackathonSlug": "proptech-realestate",
+    "name": "지니어스 개척자들5",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-6",
+    "hackathonSlug": "proptech-realestate",
+    "name": "무한 스쿼드6",
+    "isOpen": true,
+    "lookingFor": [
+      "PM",
+      "Data"
+    ],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-7",
+    "hackathonSlug": "proptech-realestate",
+    "name": "새벽 제네레이션7",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend",
+      "Fullstack",
+      "PM"
+    ],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-8",
+    "hackathonSlug": "proptech-realestate",
+    "name": "열정 러너스8",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML",
+      "Fullstack",
+      "DevOps"
+    ],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-7-9",
+    "hackathonSlug": "proptech-realestate",
+    "name": "오메가 개척자들9",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "프롭테크 부동산 자동화 해커톤 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-0",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "오메가 크루0",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-1",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "무한 팀1",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Fullstack"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-2",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "무한 팀2",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Frontend",
+      "PM"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-3",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "알파 개척자들3",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "DevOps"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-4",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "코딩 팀4",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-5",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "열정 러너스5",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Designer"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-6",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "바이브 러너스6",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Fullstack",
+      "DevOps"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-7",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "슈퍼 빌더스7",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend",
+      "DevOps"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-8",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "디지털 마스터스8",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-8-9",
+    "hackathonSlug": "quantum-computing-101",
+    "name": "바이브 스쿼드9",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "Fullstack"
+    ],
+    "intro": "양자 컴퓨팅 입문 웹 챌린지 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-0",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "디지털 빌더스0",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team0"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-1",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "오메가 스쿼드1",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Backend",
+      "PM"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team1"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-2",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "바이브 빌더스2",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "Frontend",
+      "Backend"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team2"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-3",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "무한 러너스3",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team3"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-4",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "지니어스 마스터스4",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "Fullstack"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team4"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-5",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "슈퍼 팀5",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "Fullstack",
+      "Backend"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team5"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-6",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "지니어스 제네레이션6",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "Backend"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team6"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-7",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "슈퍼 빌더스7",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "Frontend",
+      "Data"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team7"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-8",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "지니어스 해커스8",
+    "isOpen": true,
+    "lookingFor": [
+      "Data"
+    ],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team8"
+    }
+  },
+  {
+    "teamCode": "T-BULK-1774183593797-9-9",
+    "hackathonSlug": "mobility-drone-delivery",
+    "name": "지니어스 스쿼드9",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "드론 배송 라우팅 최적화 대회 대회를 준비하는 팀입니다. 화이팅!",
+    "contact": {
+      "url": "https://example.com/team9"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-0",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "슈퍼 러너스0",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-1",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "로직 제네레이션1",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-2",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "바이브 제네레이션2",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "PM",
+      "Android"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-3",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "폭풍 크루3",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "Designer",
+      "PM"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-4",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "슈퍼 마스터스4",
+    "isOpen": true,
+    "lookingFor": [
+      "iOS",
+      "Frontend",
+      "Android"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-5",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "로직 해커스5",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "Designer",
+      "PM"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-6",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "로직 마스터스6",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Data",
+      "DevOps"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-aimers-8-model-lite-7",
+    "hackathonSlug": "aimers-8-model-lite",
+    "name": "로직 제네레이션7",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "Aimers 8기 : 모델 경량화 온라인 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/aimers-8-model-lite-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-0",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "바이브 개척자들0",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Designer"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-1",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "알고리즘 크루1",
+    "isOpen": true,
+    "lookingFor": [
+      "iOS",
+      "DevOps",
+      "Designer"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-2",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "로직 개척자들2",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-3",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "개발 빌더스3",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend",
+      "Fullstack",
+      "AI/ML"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-4",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "슈퍼 크루4",
+    "isOpen": true,
+    "lookingFor": [
+      "PM",
+      "Frontend",
+      "Backend"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-5",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "무적 개척자들5",
+    "isOpen": false,
+    "lookingFor": [
+      "iOS"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-6",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "개발 스쿼드6",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-7",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "폭풍 코더스7",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps",
+      "Designer",
+      "AI/ML"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-monthly-vibe-coding-2026-02-8",
+    "hackathonSlug": "monthly-vibe-coding-2026-02",
+    "name": "무적 빌더스8",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Frontend",
+      "Data"
+    ],
+    "intro": "월간 해커톤 : 바이브 코딩 개선 AI 아이디어 공모전 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/monthly-vibe-coding-2026-02-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-0",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "폭풍 개척자들0",
+    "isOpen": false,
+    "lookingFor": [
+      "Android",
+      "PM",
+      "Designer"
+    ],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-1",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "무적 빌더스1",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-2",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "천재 스쿼드2",
+    "isOpen": true,
+    "lookingFor": [
+      "Android"
+    ],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-3",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "바이브 빌더스3",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-4",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "개발 러너스4",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-5",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "슈퍼 빌더스5",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "Data"
+    ],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-daker-handover-2026-03-6",
+    "hackathonSlug": "daker-handover-2026-03",
+    "name": "폭풍 스쿼드6",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "Fullstack"
+    ],
+    "intro": "긴급 인수인계 해커톤: 명세서만 보고 구현하라 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/daker-handover-2026-03-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-0",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "개발 코더스0",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Designer"
+    ],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-1",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "천재 스쿼드1",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Frontend"
+    ],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-2",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "개발 해커스2",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Backend"
+    ],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-3",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "개발 크루3",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "Fullstack",
+      "iOS"
+    ],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-4",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "개발 빌더스4",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-5",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "알고리즘 코더스5",
+    "isOpen": true,
+    "lookingFor": [
+      "PM",
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-6",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "열정 스쿼드6",
+    "isOpen": false,
+    "lookingFor": [
+      "Designer"
+    ],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-fintech-innovation-2026-7",
+    "hackathonSlug": "fintech-innovation-2026",
+    "name": "슈퍼 스쿼드7",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "FinTech Future: 오픈 API 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/fintech-innovation-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-0",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "천재 스쿼드0",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-1",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "오픈 제네레이션1",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "iOS"
+    ],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-2",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "슈퍼 개척자들2",
+    "isOpen": true,
+    "lookingFor": [
+      "PM",
+      "Backend"
+    ],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-3",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "바이브 개척자들3",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "Fullstack",
+      "PM"
+    ],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-4",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "바이브 크루4",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-5",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "천재 마스터스5",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-6",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "열정 고스트6",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-green-earth-hack-2026-7",
+    "hackathonSlug": "green-earth-hack-2026",
+    "name": "개발 크루7",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend",
+      "Fullstack",
+      "Data"
+    ],
+    "intro": "Green Earth Hackathon: 지속가능한 기술 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/green-earth-hack-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-0",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "슈퍼 제네레이션0",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Backend"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-1",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "폭풍 고스트1",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-2",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "폭풍 해커스2",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "PM",
+      "Backend"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-3",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "바이브 러너스3",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-4",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "로직 제네레이션4",
+    "isOpen": false,
+    "lookingFor": [
+      "Data"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-5",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "폭풍 마스터스5",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "DevOps"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-6",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "로직 개척자들6",
+    "isOpen": true,
+    "lookingFor": [
+      "PM",
+      "Android",
+      "Fullstack"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-7",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "바이브 해커스7",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-web3-defi-summer-8",
+    "hackathonSlug": "web3-defi-summer",
+    "name": "열정 러너스8",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "iOS",
+      "Fullstack"
+    ],
+    "intro": "Web3 DeFi Summer Hackathon 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/web3-defi-summer-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-0",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "오픈 개척자들0",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps",
+      "Designer",
+      "AI/ML"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-1",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "오픈 고스트1",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-2",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "열정 스쿼드2",
+    "isOpen": false,
+    "lookingFor": [
+      "iOS",
+      "DevOps"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-3",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "개발 고스트3",
+    "isOpen": false,
+    "lookingFor": [
+      "Designer"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-4",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "알고리즘 마스터스4",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-5",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "폭풍 개척자들5",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-6",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "폭풍 제네레이션6",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "Android",
+      "Backend"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-7",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "로직 마스터스7",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "iOS",
+      "Frontend"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-edtech-vision-2026-8",
+    "hackathonSlug": "edtech-vision-2026",
+    "name": "알고리즘 제네레이션8",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML",
+      "Fullstack"
+    ],
+    "intro": "EdTech Vision: 교육의 미래 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/edtech-vision-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-0",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "슈퍼 개척자들0",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-1",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "로직 해커스1",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-2",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "천재 빌더스2",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-3",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "오픈 스쿼드3",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "Backend",
+      "iOS"
+    ],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-4",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "슈퍼 크루4",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-5",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "무적 크루5",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-6",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "개발 스쿼드6",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "DevOps",
+      "Frontend"
+    ],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-7",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "바이브 크루7",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps"
+    ],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-health-med-ai-2026-8",
+    "hackathonSlug": "health-med-ai-2026",
+    "name": "개발 러너스8",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend",
+      "Android"
+    ],
+    "intro": "메디텍 AI 헬스케어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/health-med-ai-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-0",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "바이브 코더스0",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack",
+      "Backend",
+      "Data"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-1",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "알고리즘 제네레이션1",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-2",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "알고리즘 빌더스2",
+    "isOpen": false,
+    "lookingFor": [
+      "Android",
+      "iOS"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-3",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "천재 해커스3",
+    "isOpen": false,
+    "lookingFor": [
+      "DevOps",
+      "Android"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-4",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "로직 해커스4",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-5",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "오픈 코더스5",
+    "isOpen": false,
+    "lookingFor": [
+      "iOS",
+      "Android"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-6",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "오픈 해커스6",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "Frontend",
+      "AI/ML"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-7",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "오픈 코더스7",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-game-jam-indie-2026-8",
+    "hackathonSlug": "game-jam-indie-2026",
+    "name": "오픈 제네레이션8",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Backend"
+    ],
+    "intro": "2026 인디 게임잼 페스티벌 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/game-jam-indie-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-0",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "오픈 해커스0",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Fullstack"
+    ],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-1",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "천재 러너스1",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-2",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "오픈 빌더스2",
+    "isOpen": true,
+    "lookingFor": [
+      "iOS",
+      "Data"
+    ],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-3",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "로직 러너스3",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "AI/ML",
+      "Android"
+    ],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-4",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "슈퍼 크루4",
+    "isOpen": false,
+    "lookingFor": [
+      "Android",
+      "AI/ML"
+    ],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-5",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "오픈 개척자들5",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-6",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "천재 개척자들6",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend",
+      "Frontend"
+    ],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-7",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "로직 고스트7",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cybersec-defense-2026-8",
+    "hackathonSlug": "cybersec-defense-2026",
+    "name": "로직 해커스8",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend"
+    ],
+    "intro": "사이버보안 방어기제 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cybersec-defense-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-0",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "천재 마스터스0",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-1",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "천재 마스터스1",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-2",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "열정 해커스2",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML",
+      "iOS",
+      "Data"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-3",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "로직 빌더스3",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML",
+      "Fullstack"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-4",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "알고리즘 마스터스4",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Designer",
+      "PM"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-5",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "무적 마스터스5",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "DevOps"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-6",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "개발 러너스6",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "DevOps",
+      "Data"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-7",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "오픈 고스트7",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "Android",
+      "AI/ML"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-open-source-contrib-2026-8",
+    "hackathonSlug": "open-source-contrib-2026",
+    "name": "개발 마스터스8",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "오픈소스 기여톤 (Contribthon) 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/open-source-contrib-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-0",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "열정 마스터스0",
+    "isOpen": true,
+    "lookingFor": [
+      "Frontend",
+      "Backend"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-1",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "열정 고스트1",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "PM",
+      "Frontend"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-2",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "로직 고스트2",
+    "isOpen": true,
+    "lookingFor": [
+      "iOS"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-3",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "슈퍼 개척자들3",
+    "isOpen": false,
+    "lookingFor": [
+      "Android"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-4",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "로직 고스트4",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-5",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "오픈 러너스5",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-6",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "바이브 러너스6",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Data"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-7",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "열정 마스터스7",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "PM"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-data-science-climate-2026-8",
+    "hackathonSlug": "data-science-climate-2026",
+    "name": "천재 스쿼드8",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML",
+      "PM",
+      "DevOps"
+    ],
+    "intro": "기후변화 대응 데이터 사이언스 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/data-science-climate-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-0",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "로직 해커스0",
+    "isOpen": false,
+    "lookingFor": [
+      "AI/ML",
+      "Designer",
+      "Backend"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-1",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "개발 코더스1",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-2",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "로직 빌더스2",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-3",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "오픈 빌더스3",
+    "isOpen": true,
+    "lookingFor": [
+      "Data",
+      "DevOps",
+      "AI/ML"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-4",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "알고리즘 개척자들4",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Data"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-5",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "폭풍 개척자들5",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Backend"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-6",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "무적 빌더스6",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Android"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-7",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "알고리즘 마스터스7",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack",
+      "iOS"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-smart-city-mobility-2026-8",
+    "hackathonSlug": "smart-city-mobility-2026",
+    "name": "열정 러너스8",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "Backend"
+    ],
+    "intro": "스마트시티 모빌리티 챌린지 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/smart-city-mobility-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-0",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "바이브 개척자들0",
+    "isOpen": true,
+    "lookingFor": [
+      "AI/ML",
+      "Designer"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-1",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "무적 크루1",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-2",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "열정 고스트2",
+    "isOpen": true,
+    "lookingFor": [
+      "Backend",
+      "Data",
+      "DevOps"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-3",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "개발 러너스3",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-4",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "폭풍 개척자들4",
+    "isOpen": false,
+    "lookingFor": [
+      "iOS",
+      "Android"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-5",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "폭풍 개척자들5",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "AI/ML",
+      "Frontend"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-6",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "슈퍼 개척자들6",
+    "isOpen": false,
+    "lookingFor": [
+      "Android",
+      "Data",
+      "DevOps"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-7",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "열정 크루7",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend",
+      "iOS"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-robotics-control-2026-8",
+    "hackathonSlug": "robotics-control-2026",
+    "name": "바이브 고스트8",
+    "isOpen": false,
+    "lookingFor": [
+      "Frontend"
+    ],
+    "intro": "차세대 로보틱스 제어 해커톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/robotics-control-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-0",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "개발 제네레이션0",
+    "isOpen": false,
+    "lookingFor": [
+      "Designer",
+      "iOS"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-1",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "무적 마스터스1",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Data",
+      "PM"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-2",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "개발 빌더스2",
+    "isOpen": false,
+    "lookingFor": [
+      "Backend",
+      "PM",
+      "Frontend"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-3",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "슈퍼 마스터스3",
+    "isOpen": false,
+    "lookingFor": [
+      "Data",
+      "Fullstack"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-4",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "로직 코더스4",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-5",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "바이브 제네레이션5",
+    "isOpen": false,
+    "lookingFor": [
+      "Fullstack",
+      "Android"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-6",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "슈퍼 제네레이션6",
+    "isOpen": true,
+    "lookingFor": [
+      "Android"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-7",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "로직 크루7",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "PM",
+      "Fullstack"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-cloud-native-devops-2026-8",
+    "hackathonSlug": "cloud-native-devops-2026",
+    "name": "폭풍 제네레이션8",
+    "isOpen": true,
+    "lookingFor": [
+      "Android",
+      "DevOps",
+      "Fullstack"
+    ],
+    "intro": "Cloud Native DevOps 대회 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/cloud-native-devops-2026-fill8"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-0",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "로직 해커스0",
+    "isOpen": false,
+    "lookingFor": [
+      "PM",
+      "Designer",
+      "Frontend"
+    ],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill0"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-1",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "로직 제네레이션1",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill1"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-2",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "바이브 스쿼드2",
+    "isOpen": false,
+    "lookingFor": [
+      "iOS",
+      "Fullstack",
+      "Data"
+    ],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill2"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-3",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "천재 빌더스3",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill3"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-4",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "무적 마스터스4",
+    "isOpen": true,
+    "lookingFor": [],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill4"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-5",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "천재 개척자들5",
+    "isOpen": false,
+    "lookingFor": [],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill5"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-6",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "무적 스쿼드6",
+    "isOpen": true,
+    "lookingFor": [
+      "Designer",
+      "Frontend",
+      "AI/ML"
+    ],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill6"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-7",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "개발 제네레이션7",
+    "isOpen": true,
+    "lookingFor": [
+      "Fullstack",
+      "Android",
+      "iOS"
+    ],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill7"
+    }
+  },
+  {
+    "teamCode": "T-FILL-1774183695084-ar-vr-metaverse-2026-8",
+    "hackathonSlug": "ar-vr-metaverse-2026",
+    "name": "바이브 코더스8",
+    "isOpen": true,
+    "lookingFor": [
+      "DevOps",
+      "Fullstack",
+      "AI/ML"
+    ],
+    "intro": "AR/VR 메타버스 크리에이터톤 우승을 목표로 달립니다!",
+    "contact": {
+      "url": "https://example.com/ar-vr-metaverse-2026-fill8"
+    }
+  }
 ]

@@ -120,6 +120,111 @@
           "submittedAt": "2025-08-10T09:59:00+09:00"
         }
       ]
+    },
+    {
+      "hackathonSlug": "health-med-ai-2026",
+      "entries": [
+        {
+          "rank": 1,
+          "nickname": "EarlyBirds",
+          "score": 85.0
+        },
+        {
+          "rank": 2,
+          "nickname": "Team HealthTech",
+          "score": "Pending"
+        }
+      ]
+    },
+    {
+      "hackathonSlug": "game-jam-indie-2026",
+      "entries": [
+        {
+          "rank": 1,
+          "nickname": "Team Game",
+          "score": 98.5
+        },
+        {
+          "rank": 2,
+          "nickname": "CodeBreakers",
+          "score": 92.0
+        },
+        {
+          "rank": 3,
+          "nickname": "Innovators",
+          "score": 88.5
+        }
+      ]
+    },
+    {
+      "hackathonSlug": "open-source-contrib-2026",
+      "entries": [
+        {
+          "rank": 1,
+          "nickname": "EarlyBirds",
+          "score": 85.0
+        },
+        {
+          "rank": 2,
+          "nickname": "Team OpenSource",
+          "score": "Pending"
+        }
+      ]
+    },
+    {
+      "hackathonSlug": "smart-city-mobility-2026",
+      "entries": [
+        {
+          "rank": 1,
+          "nickname": "Team Mobility",
+          "score": 98.5
+        },
+        {
+          "rank": 2,
+          "nickname": "CodeBreakers",
+          "score": 92.0
+        },
+        {
+          "rank": 3,
+          "nickname": "Innovators",
+          "score": 88.5
+        }
+      ]
+    },
+    {
+      "hackathonSlug": "cloud-native-devops-2026",
+      "entries": [
+        {
+          "rank": 1,
+          "nickname": "EarlyBirds",
+          "score": 85.0
+        },
+        {
+          "rank": 2,
+          "nickname": "Team Cloud",
+          "score": "Pending"
+        }
+      ]
+    },
+    {
+      "hackathonSlug": "ar-vr-metaverse-2026",
+      "entries": [
+        {
+          "rank": 1,
+          "nickname": "Team AR",
+          "score": 98.5
+        },
+        {
+          "rank": 2,
+          "nickname": "CodeBreakers",
+          "score": 92.0
+        },
+        {
+          "rank": 3,
+          "nickname": "Innovators",
+          "score": 88.5
+        }
+      ]
     }
   ]
 }

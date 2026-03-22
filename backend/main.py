@@ -122,10 +122,31 @@ def get_rankings(days: Optional[int] = None):
     now = datetime.now()
     rankings = [
          {"rank": 1, "nickname": "CodeMaster", "points": 12500, "updatedAt": (now - timedelta(days=2)).isoformat()},
-         {"rank": 2, "nickname": "VibeCoder99", "points": 9400, "updatedAt": (now - timedelta(days=15)).isoformat()},
-         {"rank": 3, "nickname": "FrontendNinja", "points": 8300, "updatedAt": (now - timedelta(days=25)).isoformat()},
-         {"rank": 4, "nickname": "BackendHero", "points": 6200, "updatedAt": (now - timedelta(days=40)).isoformat()},
+         {"rank": 2, "nickname": "VibeCoder99", "points": 9400, "updatedAt": (now - timedelta(days=5)).isoformat()},
+         {"rank": 3, "nickname": "개발하는사자", "points": 8300, "updatedAt": (now - timedelta(days=1)).isoformat()},
+         {"rank": 4, "nickname": "BackendHero", "points": 6200, "updatedAt": (now - timedelta(days=4)).isoformat()},
+         {"rank": 5, "nickname": "디자인장인", "points": 5800, "updatedAt": (now - timedelta(days=8)).isoformat()},
+         {"rank": 6, "nickname": "NextJS러버", "points": 5500, "updatedAt": (now - timedelta(days=14)).isoformat()},
+         {"rank": 7, "nickname": "인디게임개발자", "points": 4900, "updatedAt": (now - timedelta(days=22)).isoformat()},
+         {"rank": 8, "nickname": "파이썬빌더", "points": 4600, "updatedAt": (now - timedelta(days=12)).isoformat()},
+         {"rank": 9, "nickname": "AI조련사", "points": 4300, "updatedAt": (now - timedelta(days=6)).isoformat()},
+         {"rank": 10, "nickname": "슈퍼프론트엔드", "points": 4000, "updatedAt": (now - timedelta(days=19)).isoformat()},
+         {"rank": 11, "nickname": "오픈소스기여자", "points": 3800, "updatedAt": (now - timedelta(days=3)).isoformat()},
+         {"rank": 12, "nickname": "디버깅마스터", "points": 3400, "updatedAt": (now - timedelta(days=28)).isoformat()},
+         {"rank": 13, "nickname": "블록체인해커", "points": 3100, "updatedAt": (now - timedelta(days=32)).isoformat()},
+         {"rank": 14, "nickname": "서버아키텍트", "points": 2900, "updatedAt": (now - timedelta(days=50)).isoformat()},
     ]
+    import random
+    random.seed(42)
+    names = ["코딩머신", "버그잡이", "해커", "디자이너", "오픈소스러", "엔지니어", "서버관리자", "넥스트제이에스", "노드제이에스", "자바스프링", "고랭최고", "파이썬맨"]
+    modifiers = ["빠른", "느린", "조용한", "화난", "강력한", "행복한", "용감한", "천재", "바보"]
+    for i in range(50):
+        rankings.append({
+            "rank": 0,
+            "nickname": f"{random.choice(modifiers)}{random.choice(names)}{i}",
+            "points": random.randint(100, 11000),
+            "updatedAt": (now - timedelta(days=random.randint(1, 60))).isoformat()
+        })
     
     if days:
         cutoff = now - timedelta(days=days)
@@ -133,8 +154,10 @@ def get_rankings(days: Optional[int] = None):
         # Python 3.7+ fromisoformat handles simple iso formats
         rankings = [r for r in rankings if datetime.fromisoformat(r["updatedAt"]) >= cutoff]
         
-        for i, r in enumerate(rankings):
-            r["rank"] = i + 1
+    # Re-rank strictly sequentially for the filtered (or unfiltered) output
+    rankings.sort(key=lambda x: x["points"], reverse=True)
+    for i, r in enumerate(rankings):
+        r["rank"] = i + 1
 
     return rankings
 
