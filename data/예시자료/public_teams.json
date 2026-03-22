@@ -9,5 +9,6 @@
   { "teamCode": "T-FIN-2", "hackathonSlug": "fintech-innovation-2026", "name": "SaveMore", "isOpen": false, "lookingFor": [], "intro": "모집 마감", "contact": { "url": "https://open.kakao.com/o/8" } },
   { "teamCode": "T-GREEN-1", "hackathonSlug": "green-earth-hack-2026", "name": "EcoWarriors", "isOpen": true, "lookingFor": ["Data Scientist", "IoT"], "intro": "센서 데이터 분석가 구합니다.", "contact": { "url": "https://open.kakao.com/o/9" } },
   { "teamCode": "T-GREEN-2", "hackathonSlug": "green-earth-hack-2026", "name": "ZeroWasteApp", "isOpen": true, "lookingFor": ["Flutter/React Native"], "intro": "앱 개발자 모십니다.", "contact": { "url": "https://open.kakao.com/o/10" } },
-  { "teamCode": "T-WEB3-1", "hackathonSlug": "web3-defi-summer", "name": "BlockGeeks", "isOpen": false, "lookingFor": [], "intro": "우승 목표 달성 팀", "contact": { "url": "https://open.kakao.com/o/11" } }
+  { "teamCode": "T-WEB3-1", "hackathonSlug": "web3-defi-summer", "name": "BlockGeeks", "isOpen": false, "lookingFor": [], "intro": "우승 목표 달성 팀", "contact": { "url": "https://open.kakao.com/o/11" } },
+  { "teamCode": "T-GLOBAL-1", "hackathonSlug": "global", "name": "Hackathon Nomads", "isOpen": true, "lookingFor": ["Any"], "intro": "We do random hackathons globally. Looking for versatile devs.", "contact": { "url": "https://open.kakao.com/o/12" } }
 ]

@@ -23,6 +23,17 @@ export const setLocalItem = (key, value) => {
 
 // Services
 export const apiConfig = {
+  async fetchRankings(days = null) {
+    try {
+      const qs = days ? `?days=${days}` : '';
+      const res = await fetch(`${API_BASE}/rankings${qs}`);
+      return await res.json();
+    } catch (e) {
+      console.error(e);
+      return [];
+    }
+  },
+
   async fetchHackathons() {
     try {
       const res = await fetch(`${API_BASE}/hackathons`);
@@ -65,14 +76,36 @@ export const apiConfig = {
     return { success: true };
   },
 
+  async deleteCamp(teamCode) {
+    let locals = getLocalItem('local_camps', []);
+    locals = locals.filter(c => c.teamCode !== teamCode);
+    setLocalItem('local_camps', locals);
+    return { success: true };
+  },
+
   async fetchLeaderboard(hackathonSlug) {
     const locals = getLocalItem(`local_subs_${hackathonSlug}`, []);
     try {
       const qs = hackathonSlug ? `?hackathon=${hackathonSlug}` : '';
       const res = await fetch(`${API_BASE}/leaderboard${qs}`);
       const serverData = await res.json();
-      // Combine logically based on requirements later
-      return serverData;
+      
+      const combined = [...(serverData.entries || []), ...locals];
+      
+      // Basic sorting descending (assumes number score or simply leaves pending at bottom)
+      combined.sort((a, b) => {
+        if (a.score === 'Pending') return 1;
+        if (b.score === 'Pending') return -1;
+        return (b.score || 0) - (a.score || 0);
+      });
+      // Re-assign ranks
+      combined.forEach((item, index) => {
+        if (item.score !== 'Pending') {
+           item.rank = index + 1;
+        }
+      });
+      
+      return { ...serverData, entries: combined };
     } catch (e) {
       // Fallback mock
       return { entries: locals };
@@ -87,8 +120,17 @@ export const apiConfig = {
       rank: '-', // Unset until approved
       teamName: payload.teamCode, // For mock
       score: 'Pending',
-      submittedAt: new Date().toISOString()
+      submittedAt: new Date().toISOString(),
+      isLocal: true
     });
+    setLocalItem(key, locals);
+    return { success: true };
+  },
+
+  async undoSubmit(hackathonSlug, teamCode) {
+    const key = `local_subs_${hackathonSlug}`;
+    let locals = getLocalItem(key, []);
+    locals = locals.filter(sub => sub.teamName !== teamCode);
     setLocalItem(key, locals);
     return { success: true };
   }

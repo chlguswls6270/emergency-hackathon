@@ -32,7 +32,31 @@ def read_root():
 
 @app.get("/api/hackathons", summary="Get all hackathons")
 def get_hackathons():
-    return load_json("public_hackathons.json")
+    hackathons = load_json("public_hackathons.json")
+    details = load_json("public_hackathon_detail.json")
+    teams = load_json("public_teams.json")
+    
+    # create lookup for details
+    detail_list = details if isinstance(details, list) else []
+    if isinstance(details, dict):
+        if "slug" in details: detail_list.append(details)
+        detail_list.extend(details.get("extraDetails", []))
+
+    for hack in hackathons:
+        slug = hack["slug"]
+        start_date = None
+        for d in detail_list:
+            if d.get("slug") == slug:
+                sections = d.get("sections", d)
+                for ms in sections.get("schedule", {}).get("milestones", []):
+                    if "시작" in ms.get("name", ""):
+                        start_date = ms.get("at")
+                        break
+                break
+        hack["startDate"] = start_date
+        hack["participantCount"] = sum(1 for t in teams if t.get("hackathonSlug") == slug)
+
+    return hackathons
 
 @app.get("/api/hackathons/{slug}", summary="Get hackathon details")
 def get_hackathon_detail(slug: str):
@@ -65,24 +89,54 @@ def get_camps(hackathon: Optional[str] = None):
 @app.get("/api/leaderboard", summary="Get global or specific leaderboards")
 def get_leaderboard(hackathon: Optional[str] = None):
     data = load_json("public_leaderboard.json")
+    result = data if not hackathon else None
+
     if hackathon:
         if data.get("hackathonSlug") == hackathon:
-            return data
-        for extra in data.get("extraLeaderboards", []):
-            if extra.get("hackathonSlug") == hackathon:
-                return extra
+            result = data
+        else:
+            for extra in data.get("extraLeaderboards", []):
+                if extra.get("hackathonSlug") == hackathon:
+                    result = extra
+                    break
+
+    if result is None and hackathon:
         raise HTTPException(status_code=404, detail="Leaderboard not found")
-    return data
+
+    # Inject unit dynamically based on detail metric
+    if hackathon and result:
+        try:
+            detail = get_hackathon_detail(hackathon)
+            metric = detail.get("sections", detail).get("eval", {}).get("metricName", "Score")
+            result["unit"] = "pts" if "Score" in metric else metric
+        except:
+            result["unit"] = "pts"
+
+    return result
+
+from datetime import datetime, timedelta
 
 @app.get("/api/rankings", summary="Placeholder for user rankings")
-def get_rankings():
+def get_rankings(days: Optional[int] = None):
     # Constructing mock global rankings
-    return [
-         {"rank": 1, "nickname": "CodeMaster", "points": 12500},
-         {"rank": 2, "nickname": "VibeCoder99", "points": 9400},
-         {"rank": 3, "nickname": "FrontendNinja", "points": 8300},
-         {"rank": 4, "nickname": "BackendHero", "points": 6200},
+    now = datetime.now()
+    rankings = [
+         {"rank": 1, "nickname": "CodeMaster", "points": 12500, "updatedAt": (now - timedelta(days=2)).isoformat()},
+         {"rank": 2, "nickname": "VibeCoder99", "points": 9400, "updatedAt": (now - timedelta(days=15)).isoformat()},
+         {"rank": 3, "nickname": "FrontendNinja", "points": 8300, "updatedAt": (now - timedelta(days=25)).isoformat()},
+         {"rank": 4, "nickname": "BackendHero", "points": 6200, "updatedAt": (now - timedelta(days=40)).isoformat()},
     ]
+    
+    if days:
+        cutoff = now - timedelta(days=days)
+        # Using string comparison for isoformat works fine, but parsing is safer
+        # Python 3.7+ fromisoformat handles simple iso formats
+        rankings = [r for r in rankings if datetime.fromisoformat(r["updatedAt"]) >= cutoff]
+        
+        for i, r in enumerate(rankings):
+            r["rank"] = i + 1
+
+    return rankings
 
 class SubmitFormData(BaseModel):
     teamCode: str

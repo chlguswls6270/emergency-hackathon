@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { apiConfig } from '../services/api';
+import HackathonCard from '../components/HackathonCard';
 
 const HackathonList = () => {
   const [hackathons, setHackathons] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedTag, setSelectedTag] = useState('All');
 
   useEffect(() => {
     apiConfig.fetchHackathons().then(data => {
@@ -14,39 +16,42 @@ const HackathonList = () => {
   }, []);
 
   if (loading) return <div className="loading">Loading Hackathons...</div>;
-  if (!hackathons.length) return <div className="no-data">No hackathons found...</div>;
+  if (!hackathons.length && selectedTag === 'All') return <div className="no-data">No hackathons found...</div>;
+
+  const allTags = ['All', ...new Set(hackathons.flatMap(h => h.tags || []))];
+  const filteredHackathons = selectedTag === 'All' ? hackathons : hackathons.filter(h => h.tags?.includes(selectedTag));
 
   return (
     <div style={{ marginTop: '2rem' }}>
-      <h1 style={{ marginBottom: '2rem', fontSize: '2.5rem' }}>🔥 Discover Hackathons</h1>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem' }}>
-        {hackathons.map((h) => (
-          <Link to={`/hackathons/${h.slug}`} key={h.slug} className="glass-card" style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ height: '140px', background: `url(${h.thumbnailUrl}) center/cover`, borderRadius: '8px', marginBottom: '1rem', backgroundColor: 'var(--bg-secondary)' }} />
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-              <span style={{ 
-                padding: '0.2rem 0.6rem', 
-                borderRadius: '12px', 
-                fontSize: '0.8rem', 
-                fontWeight: '600',
-                background: h.status === 'ongoing' ? 'rgba(59, 130, 246, 0.2)' : 'rgba(255, 255, 255, 0.1)',
-                color: h.status === 'ongoing' ? '#93c5fd' : 'var(--text-secondary)'
-              }}>
-                {h.status.toUpperCase()}
-              </span>
-            </div>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{h.title}</h3>
-            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
-              {h.tags?.map(t => (
-                <span key={t} style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem', background: 'var(--glass-border)', borderRadius: '4px' }}>#{t}</span>
-              ))}
-            </div>
-            <div style={{ marginTop: 'auto', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-              Ends: {new Date(h.period?.endAt).toLocaleDateString()}
-            </div>
-          </Link>
+      <Link to="/" style={{ color: 'var(--accent-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>
+        ← Go back to Home
+      </Link>
+      <h1 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>🔥 Discover Hackathons</h1>
+      
+      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+        {allTags.map(tag => (
+          <button 
+            key={tag} 
+            onClick={() => setSelectedTag(tag)}
+            className="tag-badge"
+            style={{ 
+              background: selectedTag === tag ? 'var(--accent-primary)' : 'var(--glass-border)',
+              color: selectedTag === tag ? 'white' : 'inherit',
+              border: 'none', cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.9rem'
+            }}
+          >
+            {tag}
+          </button>
         ))}
       </div>
+
+      {filteredHackathons.length === 0 ? <div className="no-data">No hackathons matched the selected tag.</div> : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem' }}>
+          {filteredHackathons.map((h) => (
+            <HackathonCard key={h.slug} hackathon={h} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

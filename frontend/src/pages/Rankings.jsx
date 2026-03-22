@@ -1,27 +1,38 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { apiConfig } from '../services/api';
+import LeaderboardRow from '../components/LeaderboardRow';
 
 const Rankings = () => {
   const [rankings, setRankings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [days, setDays] = useState(null);
 
   useEffect(() => {
-    // Usually uses global rankings endpoint, currently mocked in API
-    fetch('http://localhost:8000/api/rankings')
-      .then(res => res.json())
+    setLoading(true);
+    apiConfig.fetchRankings(days)
       .then(data => {
         setRankings(data);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, []);
+  }, [days]);
 
   return (
     <div style={{ marginTop: '2rem', maxWidth: '800px', margin: '2rem auto 0 auto' }}>
+      <Link to="/" style={{ color: 'var(--accent-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>
+        ← Go back to Home
+      </Link>
       <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center' }}>🏆 Global Rankings</h1>
-      <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', textAlign: 'center' }}>
+      <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', textAlign: 'center' }}>
         The top performers across all hackathons.
       </p>
+
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
+        <button onClick={() => setDays(7)} className="tag-badge" style={{ background: days === 7 ? 'var(--accent-primary)' : 'var(--glass-border)', color: days === 7 ? 'white' : 'inherit', border: 'none', padding: '0.5rem 1rem', cursor: 'pointer' }}>Past 7 Days</button>
+        <button onClick={() => setDays(30)} className="tag-badge" style={{ background: days === 30 ? 'var(--accent-primary)' : 'var(--glass-border)', color: days === 30 ? 'white' : 'inherit', border: 'none', padding: '0.5rem 1rem', cursor: 'pointer' }}>Past 30 Days</button>
+        <button onClick={() => setDays(null)} className="tag-badge" style={{ background: days === null ? 'var(--accent-primary)' : 'var(--glass-border)', color: days === null ? 'white' : 'inherit', border: 'none', padding: '0.5rem 1rem', cursor: 'pointer' }}>All Time</button>
+      </div>
 
       {loading ? <div className="loading">Loading Rankings...</div> : (
         <div className="glass-card" style={{ padding: 0, overflow: 'hidden' }}>
@@ -35,13 +46,14 @@ const Rankings = () => {
             </thead>
             <tbody>
               {rankings.map((r, i) => (
-                <tr key={i} style={{ borderBottom: '1px solid var(--border-color)', transition: 'background 0.2s', ':hover': { background: 'rgba(255, 255, 255, 0.02)' } }}>
-                  <td style={{ padding: '1rem', fontWeight: 'bold', color: i < 3 ? 'var(--accent-primary)' : 'inherit' }}>
-                    {i === 0 ? '🥇 1' : i === 1 ? '🥈 2' : i === 2 ? '🥉 3' : r.rank}
-                  </td>
-                  <td style={{ padding: '1rem' }}>{r.nickname}</td>
-                  <td style={{ padding: '1rem', textAlign: 'right', fontWeight: 'bold' }}>{r.points.toLocaleString()}</td>
-                </tr>
+                <LeaderboardRow 
+                  key={i} 
+                  rank={r.rank} 
+                  nickname={r.nickname || r.teamName} 
+                  points={r.points || r.score} 
+                  isTop3={i < 3} 
+                  unit="pts"
+                />
               ))}
             </tbody>
           </table>
