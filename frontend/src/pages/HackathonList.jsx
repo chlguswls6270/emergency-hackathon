@@ -20,9 +20,9 @@ const HackathonList = () => {
     });
   }, []);
 
-  if (loading) return <LoadingState message="Loading Hackathons..." />;
-  if (error) return <ErrorState message="Failed to load hackathons." />;
-  if (!hackathons.length && selectedTag === 'All') return <EmptyState message="No hackathons found..." />;
+  if (loading) return <LoadingState message="해커톤 불러오는 중..." />;
+  if (error) return <ErrorState message="해커톤을 불러오지 못했습니다." />;
+  if (!hackathons.length && selectedTag === 'All') return <EmptyState message="해커톤을 찾을 수 없습니다..." />;
 
   const allTags = ['All', ...new Set(hackathons.flatMap(h => h.tags || []))];
   const filteredHackathons = selectedTag === 'All' ? hackathons : hackathons.filter(h => h.tags?.includes(selectedTag));
@@ -30,9 +30,9 @@ const HackathonList = () => {
   return (
     <div style={{ marginTop: '2rem' }}>
       <Link to="/" style={{ color: 'var(--accent-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>
-        ← Go back to Home
+        ← 홈으로 돌아가기
       </Link>
-      <h1 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>🔥 Discover Hackathons</h1>
+      <h1 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>🔥 해커톤 탐색</h1>
       
       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
         {allTags.map(tag => (
@@ -46,12 +46,12 @@ const HackathonList = () => {
               border: 'none', cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.9rem'
             }}
           >
-            {tag}
+            {tag === 'All' ? '전체' : tag}
           </button>
         ))}
       </div>
 
-      {filteredHackathons.length === 0 ? <EmptyState message="No hackathons matched the selected tag." /> : (
+      {filteredHackathons.length === 0 ? <EmptyState message="선택한 태그와 일치하는 해커톤이 없습니다." /> : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem' }}>
           {filteredHackathons.map((h) => (
             <HackathonCard key={h.slug} hackathon={h} />

@@ -11,7 +11,7 @@ const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit,
         <div style={{ display: 'flex', gap: '0.5rem' }}>
           {artifactFilename && (
             <a href={`http://localhost:8000/api/download/${artifactFilename}`} download className="glow-button" style={{ padding: '0.15rem 0.5rem', fontSize: '0.75rem', background: 'transparent', border: '1px solid #3b82f6', color: '#60a5fa', textDecoration: 'none' }}>
-              ⬇ Download
+              ⬇ 다운로드
             </a>
           )}
           {isLocal && onUndo && (
@@ -21,7 +21,7 @@ const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit,
               onMouseEnter={(e) => { e.target.style.background = 'rgba(239, 68, 68, 0.1)'; }}
               onMouseLeave={(e) => { e.target.style.background = 'transparent'; }}
             >
-              Undo
+              제출 취소
             </button>
           )}
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const LoadingState = ({ message = 'Loading...' }) => (
+export const LoadingState = ({ message = '로딩 중...' }) => (
   <div style={{ padding: '4rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
     <div className="loading-spinner" style={{
       width: '40px', height: '40px', border: '3px solid rgba(255,255,255,0.1)',
@@ -14,7 +14,7 @@ export const LoadingState = ({ message = 'Loading...' }) => (
   </div>
 );
 
-export const EmptyState = ({ icon = '📭', message = 'No data available.', actionLabel, onAction }) => (
+export const EmptyState = ({ icon = '📭', message = '데이터가 없습니다.', actionLabel, onAction }) => (
   <div className="glass-card" style={{ padding: '4rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
     <div style={{ fontSize: '3rem', marginBottom: '1.5rem', opacity: 0.6 }}>{icon}</div>
     <p style={{ fontSize: '1.1rem', marginBottom: actionLabel ? '2rem' : '0' }}>{message}</p>
@@ -24,12 +24,12 @@ export const EmptyState = ({ icon = '📭', message = 'No data available.', acti
   </div>
 );
 
-export const ErrorState = ({ message = 'An unexpected error occurred.', onRetry }) => (
+export const ErrorState = ({ message = '예기치 않은 오류가 발생했습니다.', onRetry }) => (
   <div className="glass-card" style={{ padding: '4rem', textAlign: 'center', borderColor: 'rgba(239, 68, 68, 0.4)' }}>
     <div style={{ fontSize: '3rem', marginBottom: '1.5rem', opacity: 0.8 }}>⚠️</div>
     <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem', marginBottom: onRetry ? '2rem' : '0' }}>{message}</p>
     {onRetry && (
-      <button onClick={onRetry} className="glow-button" style={{ background: '#ef4444' }}>Try Again</button>
+      <button onClick={onRetry} className="glow-button" style={{ background: '#ef4444' }}>다시 시도</button>
     )}
   </div>
 );

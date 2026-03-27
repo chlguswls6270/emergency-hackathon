@@ -37,7 +37,7 @@ const Camp = () => {
       memberCount: 1,
       createdAt: new Date().toISOString()
     });
-    alert('Team Registered Successfully! Saved to local storage.');
+    alert('팀 등록이 완료되었습니다!');
     
     // Refresh camps list without full reload
     const updatedCamps = await apiConfig.fetchCampData(hackathonSlug);
@@ -46,7 +46,7 @@ const Camp = () => {
   };
 
   const handleDelete = async (teamCode) => {
-    if (window.confirm("Are you sure you want to delete this team?")) {
+    if (window.confirm("정말로 이 팀을 삭제하시겠습니까?")) {
       await apiConfig.deleteCamp(teamCode);
       setCamps(camps.filter(c => c.teamCode !== teamCode));
     }
@@ -64,18 +64,18 @@ const Camp = () => {
   return (
     <div style={{ marginTop: '2rem' }}>
       <Link to="/" style={{ color: 'var(--accent-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>
-        ← Go back to Home
+        ← 홈으로 돌아가기
       </Link>
       <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-        🤝 {hackathonSlug ? `Camp for ${hackathonSlug}` : 'Global Hackathon Camp'}
+        🤝 {hackathonSlug ? `캠프 - ${hackathonSlug}` : '글로벌 해커톤 캠프'}
       </h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-        Find your dream team or recruit talented individuals.
+        꿈의 팀을 찾거나 능력 있는 팀원을 모집하세요.
       </p>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '2rem', alignItems: 'start' }}>
         <div>
-          <h2 style={{ marginBottom: '1.2rem', fontSize: '1.5rem' }}>Active Teams</h2>
+          <h2 style={{ marginBottom: '1.2rem', fontSize: '1.5rem' }}>활동 중인 팀</h2>
           
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
             {allTags.map(tag => (
@@ -89,12 +89,12 @@ const Camp = () => {
                   border: 'none', cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.85rem'
                 }}
               >
-                {tag === 'global' ? 'Global / Uncategorized' : tag}
+                {tag === 'global' ? '글로벌 / 미분류' : tag === 'All' ? '전체' : tag}
               </button>
             ))}
           </div>
 
-          {loading ? <LoadingState message="Loading teams..." /> : error ? <ErrorState message="Failed to load teams." /> : filteredCamps.length === 0 ? <EmptyState message="No teams found in this category. Be the first to create one!" /> : (
+          {loading ? <LoadingState message="팀 불러오는 중..." /> : error ? <ErrorState message="팀을 불러오지 못했습니다." /> : filteredCamps.length === 0 ? <EmptyState message="이 카테고리에는 팀이 없습니다. 첫 번째 팀을 만들어보세요!" /> : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
               {filteredCamps.map((c, i) => (
                 <CampCard key={i} camp={c} onDelete={handleDelete} />
@@ -104,13 +104,13 @@ const Camp = () => {
         </div>
 
         <div className="glass-card" style={{ position: 'sticky', top: '100px' }}>
-          <h2 style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>Create a Team</h2>
+          <h2 style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>팀 만들기</h2>
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <input required type="text" placeholder="Team Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
-            <textarea required placeholder="Team Introduction" value={formData.intro} onChange={e => setFormData({...formData, intro: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white', minHeight: '80px' }} />
-            <input placeholder="Looking For (comma separated)" value={formData.lookingFor} onChange={e => setFormData({...formData, lookingFor: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
-            <input required type="text" placeholder="Contact URL (Slack/Discord/Kakao)" value={formData.contact} onChange={e => setFormData({...formData, contact: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
-            <button type="submit" className="glow-button">Register Team</button>
+            <input required type="text" placeholder="팀명" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
+            <textarea required placeholder="팀 소개" value={formData.intro} onChange={e => setFormData({...formData, intro: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white', minHeight: '80px' }} />
+            <input placeholder="모집 분야 (쉼표로 구분)" value={formData.lookingFor} onChange={e => setFormData({...formData, lookingFor: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
+            <input required type="text" placeholder="연락처 URL (Slack/Discord/Kakao)" value={formData.contact} onChange={e => setFormData({...formData, contact: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
+            <button type="submit" className="glow-button">팀 등록</button>
           </form>
         </div>
       </div>
