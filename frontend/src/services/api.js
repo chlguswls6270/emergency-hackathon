@@ -112,19 +112,30 @@ export const apiConfig = {
     }
   },
 
-  async submitProject(hackathonSlug, payload) {
+  async submitProject(hackathonSlug, formData) {
     const key = `local_subs_${hackathonSlug}`;
     const locals = getLocalItem(key, []);
-    // Ensure we don't have dupes, simplistically adding
-    locals.push({
-      rank: '-', // Unset until approved
-      teamName: payload.teamCode, // For mock
-      score: 'Pending',
-      submittedAt: new Date().toISOString(),
-      isLocal: true
-    });
-    setLocalItem(key, locals);
-    return { success: true };
+    try {
+      const res = await fetch(`${API_BASE}/submit`, {
+        method: 'POST',
+        body: formData // No custom headers, let browser set boundary automatically
+      });
+      const data = await res.json();
+      
+      locals.push({
+        rank: '-', 
+        teamName: data.teamCode || formData.get('teamCode'), 
+        score: 'Pending',
+        submittedAt: new Date().toISOString(),
+        isLocal: true,
+        artifactFilename: data.filename
+      });
+      setLocalItem(key, locals);
+      return { success: true };
+    } catch (e) {
+      console.error(e);
+      return { success: false };
+    }
   },
 
   async undoSubmit(hackathonSlug, teamCode) {
@@ -132,6 +143,34 @@ export const apiConfig = {
     let locals = getLocalItem(key, []);
     locals = locals.filter(sub => sub.teamName !== teamCode);
     setLocalItem(key, locals);
+    return { success: true };
+  },
+
+  async sendOffer(hackathonSlug, toTeamCode, fromUserOrTeam) {
+    const key = `local_offers_${hackathonSlug || 'global'}`;
+    const offers = getLocalItem(key, []);
+    offers.push({
+      id: Date.now().toString(),
+      toTeamCode,
+      fromUserOrTeam,
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    });
+    setLocalItem(key, offers);
+    return { success: true };
+  },
+
+  async getOffers(hackathonSlug, teamCode) {
+    const key = `local_offers_${hackathonSlug || 'global'}`;
+    const offers = getLocalItem(key, []);
+    return offers.filter(o => o.toTeamCode === teamCode);
+  },
+
+  async updateOffer(hackathonSlug, offerId, status) {
+    const key = `local_offers_${hackathonSlug || 'global'}`;
+    let offers = getLocalItem(key, []);
+    offers = offers.map(o => o.id === offerId ? { ...o, status } : o);
+    setLocalItem(key, offers);
     return { success: true };
   }
 };

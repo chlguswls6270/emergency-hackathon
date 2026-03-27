@@ -1,6 +1,9 @@
 import json
+import os
+import shutil
 from pathlib import Path
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
@@ -18,6 +21,8 @@ app.add_middleware(
 # Load data paths
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data" / "예시자료"
+UPLOAD_DIR = BASE_DIR / "backend" / "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 def load_json(filename: str):
     filepath = DATA_DIR / filename
@@ -161,17 +166,30 @@ def get_rankings(days: Optional[int] = None):
 
     return rankings
 
-class SubmitFormData(BaseModel):
-    teamCode: str
-    hackathonSlug: str
-    artifactUrl: Optional[str] = None
-    notes: Optional[str] = None
+@app.post("/api/submit", summary="Mock submission endpoint with file upload")
+def create_submission(
+    teamCode: str = Form(...),
+    hackathonSlug: str = Form(...),
+    notes: Optional[str] = Form(None),
+    file: UploadFile = File(...)
+):
+    file_location = UPLOAD_DIR / file.filename
+    with open(file_location, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+    
+    return {
+        "status": "success", 
+        "message": "Submission received", 
+        "filename": file.filename,
+        "teamCode": teamCode
+    }
 
-@app.post("/api/submit", summary="Mock submission endpoint")
-def create_submission(payload: SubmitFormData):
-    # In reality, frontend localstorage will track actual mutations.
-    # We return a success object just to fulfill API interactions.
-    return {"status": "success", "message": "Submission received", "data": payload}
+@app.get("/api/download/{filename}", summary="Download submitted artifact")
+def download_file(filename: str):
+    file_path = UPLOAD_DIR / filename
+    if not file_path.exists():
+         raise HTTPException(status_code=404, detail="File not found")
+    return FileResponse(file_path, filename=filename)
 
 if __name__ == "__main__":
     import uvicorn

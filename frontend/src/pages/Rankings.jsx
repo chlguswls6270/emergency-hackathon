@@ -2,20 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { apiConfig } from '../services/api';
 import LeaderboardRow from '../components/LeaderboardRow';
+import { LoadingState, EmptyState, ErrorState } from '../components/StateComponents';
 
 const Rankings = () => {
   const [rankings, setRankings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [days, setDays] = useState(null);
 
   useEffect(() => {
     setLoading(true);
+    setError(false);
     apiConfig.fetchRankings(days)
       .then(data => {
         setRankings(data);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        setError(true);
+        setLoading(false);
+      });
   }, [days]);
 
   return (
@@ -34,7 +40,7 @@ const Rankings = () => {
         <button onClick={() => setDays(null)} className="tag-badge" style={{ background: days === null ? 'var(--accent-primary)' : 'var(--glass-border)', color: days === null ? 'white' : 'inherit', border: 'none', padding: '0.5rem 1rem', cursor: 'pointer' }}>All Time</button>
       </div>
 
-      {loading ? <div className="loading">Loading Rankings...</div> : (
+      {loading ? <LoadingState message="Loading Rankings..." /> : error ? <ErrorState message="Failed to load rankings" /> : rankings.length === 0 ? <EmptyState message="No rankings to display" /> : (
         <div className="glass-card" style={{ padding: 0, overflow: 'hidden' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead style={{ background: 'rgba(255, 255, 255, 0.05)' }}>

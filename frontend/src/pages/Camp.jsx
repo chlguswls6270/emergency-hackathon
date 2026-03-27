@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { apiConfig } from '../services/api';
 import CampCard from '../components/CampCard';
+import { LoadingState, EmptyState, ErrorState } from '../components/StateComponents';
 
 const Camp = () => {
   const [camps, setCamps] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [selectedTag, setSelectedTag] = useState('All');
   const [searchParams] = useSearchParams();
   const hackathonSlug = searchParams.get('hackathon');
@@ -16,6 +18,9 @@ const Camp = () => {
   useEffect(() => {
     apiConfig.fetchCampData(hackathonSlug).then(data => {
       setCamps(data);
+      setLoading(false);
+    }).catch(() => {
+      setError(true);
       setLoading(false);
     });
   }, [hackathonSlug]);
@@ -89,7 +94,7 @@ const Camp = () => {
             ))}
           </div>
 
-          {loading ? <div className="loading">Loading teams...</div> : filteredCamps.length === 0 ? <div className="no-data">No teams found in this category. Be the first to create one!</div> : (
+          {loading ? <LoadingState message="Loading teams..." /> : error ? <ErrorState message="Failed to load teams." /> : filteredCamps.length === 0 ? <EmptyState message="No teams found in this category. Be the first to create one!" /> : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
               {filteredCamps.map((c, i) => (
                 <CampCard key={i} camp={c} onDelete={handleDelete} />

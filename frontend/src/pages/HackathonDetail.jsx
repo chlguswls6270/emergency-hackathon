@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { apiConfig } from '../services/api';
 import CampCard from '../components/CampCard';
 import LeaderboardRow from '../components/LeaderboardRow';
+import { LoadingState, EmptyState, ErrorState } from '../components/StateComponents';
 
 const Section = ({ title, children, emoji }) => (
   <div className="glass-card" style={{ marginBottom: '2rem' }}>
@@ -19,10 +20,12 @@ const HackathonDetail = () => {
   const [camps, setCamps] = useState([]);
   const [leaderboard, setLeaderboard] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   // Mock Form State
   const [submitNotes, setSubmitNotes] = useState('');
   const [teamCode, setTeamCode] = useState('');
+  const [submitFile, setSubmitFile] = useState(null);
 
   useEffect(() => {
     Promise.all([
@@ -34,18 +37,30 @@ const HackathonDetail = () => {
       setCamps(campData);
       setLeaderboard(leaderboardData);
       setLoading(false);
+    }).catch(() => {
+      setError(true);
+      setLoading(false);
     });
   }, [slug]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!teamCode) return alert('Enter a team code');
-    await apiConfig.submitProject(slug, { teamCode, notes: submitNotes });
+    if (!submitFile) return alert('Please attach a submission file');
+    
+    const formData = new FormData();
+    formData.append('hackathonSlug', slug);
+    formData.append('teamCode', teamCode);
+    formData.append('notes', submitNotes);
+    formData.append('file', submitFile);
+
+    await apiConfig.submitProject(slug, formData);
     const updatedLeaderboard = await apiConfig.fetchLeaderboard(slug);
     setLeaderboard(updatedLeaderboard);
     setSubmitNotes('');
     setTeamCode('');
-    alert('Mock Submission Saved! Leaderboard updated instantly.');
+    setSubmitFile(null);
+    alert('Project Submitted! Your artifact has been securely uploaded.');
   };
 
   const handleCampDelete = async (teamCode) => {
@@ -83,8 +98,8 @@ const HackathonDetail = () => {
 
   const entriesToShow = getCombinedLeaderboard();
 
-  if (loading) return <div className="loading">Loading Hackathon Detail...</div>;
-  if (!detail) return <div className="error">Hackathon Detail not found. Ensure API is running.</div>;
+  if (loading) return <LoadingState message="Loading Hackathon Detail..." />;
+  if (error || !detail) return <ErrorState message="Hackathon Detail not found. Ensure API is running." />;
 
   // Sometimes JSON is nested inside `sections`, extracting it carefully:
   const content = detail.sections || detail;
@@ -148,7 +163,7 @@ const HackathonDetail = () => {
             </p>
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <input required type="text" placeholder="Your Team Name/Code" value={teamCode} onChange={(e) => setTeamCode(e.target.value)} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
-              <input type="text" placeholder="Artifact URL (Mock)" style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
+              <input required type="file" onChange={e => setSubmitFile(e.target.files[0])} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white', fontSize: '0.9rem' }} />
               <textarea 
                 placeholder="Optional Notes..." 
                 value={submitNotes} 
@@ -166,7 +181,7 @@ const HackathonDetail = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1rem', maxHeight: '400px', overflowY: 'auto', paddingRight: '0.5rem' }}>
               {camps.length > 0 ? camps.map((c, i) => (
                 <CampCard key={i} camp={c} onDelete={handleCampDelete} />
-              )) : <div className="no-data">No teams found.</div>}
+              )) : <EmptyState message="No teams found." icon="🤷" />}
             </div>
             <Link to={`/camp?hackathon=${slug}`} className="glow-button" style={{ display: 'block', textAlign: 'center', background: 'var(--glass-border)' }}>
               Visit Full Camp
@@ -187,13 +202,14 @@ const HackathonDetail = () => {
                         points={r.points || r.score} 
                         isTop3={r.rank === 1 || r.rank === 2 || r.rank === 3} 
                         isLocal={r.isLocal}
+                        artifactFilename={r.artifactFilename}
                         onUndo={handleUndoSubmit}
                         unit={r.score !== 'Not submitted yet' && r.score !== 'Pending' ? leaderboard?.unit : null}
                       />
                     ))}
                   </tbody>
                 </table>
-              ) : <div className="no-data" style={{ padding: '1rem' }}>No submissions yet.</div>}
+              ) : <EmptyState message="No submissions yet." />}
               
               <Link to={`/rankings`} className="glow-button" style={{ display: 'block', textAlign: 'center', background: 'var(--glass-border)' }}>
                 View Global Rankings
