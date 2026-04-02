@@ -164,7 +164,7 @@ const HackathonDetail = () => {
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)', gap: '2rem' }}>
+      <div className="detail-grid">
         <div className="left-column">
           {/* 1. Overview */}
           <Section title="Overview (안내/개요)" emoji="📌">

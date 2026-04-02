@@ -87,7 +87,7 @@ const Camp = () => {
         꿈의 팀을 찾거나 능력 있는 팀원을 모집하세요.
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '2rem', alignItems: 'start' }}>
+      <div className="camp-grid">
         <div>
           <h2 style={{ marginBottom: '1.2rem', fontSize: '1.5rem' }}>활동 중인 팀</h2>
           

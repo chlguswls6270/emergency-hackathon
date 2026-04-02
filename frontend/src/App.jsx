@@ -70,7 +70,7 @@ const Home = () => {
       <div style={{ marginTop: '5rem', display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'flex-start', textAlign: 'left' }}>
         
         {/* LEFT SIDEBAR (Dynamic Panels) */}
-        <aside style={{ flex: '1', minWidth: '250px', borderRight: '2px solid var(--border-color)', paddingRight: '2rem' }}>
+        <aside className="home-sidebar">
           <div style={{ paddingBottom: '2rem', marginBottom: '2rem', borderBottom: '1px dashed var(--border-color)' }}>
             <h3 className="magical-serif" style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>📌 나의 참가 내역</h3>
             {participations.length > 0 ? (
@@ -113,7 +113,7 @@ const Home = () => {
           
           {loading ? <LoadingState message="전속 부엉이가 기사를 싣고 오는 중..." /> : (
             <>
-              <div style={{ columnCount: 4, columnGap: '2rem' }}>
+              <div className="masonry-feed">
                 {mixedFeed.slice(0, displayCount).map((item, i) => (
                   <div key={`mix-${item.type}-${i}`} style={{ breakInside: 'avoid', marginBottom: '2rem' }}>
                     {item.type === 'hackathon' 
