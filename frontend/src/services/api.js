@@ -1,7 +1,8 @@
 // API Service separating endpoints and frontend
 // Base URL from the FastAPI server, but can mock data directly if Backend is down.
 
-const API_BASE = 'http://localhost:8000/api';
+const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const API_BASE = IS_LOCAL ? 'http://localhost:8000/api' : '/api';
 
 // localStorage Helpers
 export const getLocalItem = (key, defaultVal) => {

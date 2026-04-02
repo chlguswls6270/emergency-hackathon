@@ -21,7 +21,12 @@ app.add_middleware(
 # Load data paths
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data" / "예시자료"
-UPLOAD_DIR = BASE_DIR / "backend" / "uploads"
+
+IS_VERCEL = os.environ.get("VERCEL") == "1"
+if IS_VERCEL:
+    UPLOAD_DIR = Path("/tmp/uploads")
+else:
+    UPLOAD_DIR = BASE_DIR / "backend" / "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 def load_json(filename: str):
