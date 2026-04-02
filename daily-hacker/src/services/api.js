@@ -2,9 +2,13 @@
 // Base URL from the FastAPI server, but can mock data directly if Backend is down.
 
 const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+<<<<<<< HEAD:daily-hacker/src/services/api.js
+const API_BASE = IS_LOCAL ? 'http://localhost:8000/api' : '/api';
+=======
 const API_BASE = IS_LOCAL 
   ? 'http://localhost:8000/api' 
   : (import.meta.env.VITE_API_URL || 'https://emergency-hackathon.onrender.com/api');
+>>>>>>> new-start:frontend/src/services/api.js
 
 // localStorage Helpers
 export const getLocalItem = (key, defaultVal) => {
