@@ -42,7 +42,7 @@
 1. **저장소 내려받기 및 이동**
    ```bash
    cd emergency-hackathon
-   cd frontend
+   cd daily-hacker
    ```
 
 2. **필수 패키지 설치**
