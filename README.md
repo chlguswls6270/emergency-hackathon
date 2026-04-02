@@ -65,3 +65,28 @@
 2. **이벤트 참가**: 관심 있는 해커톤 상세 페이지에서 `[참가 신청]`을 누르면 즉시 참가자 명부에 로컬 동기화됩니다.
 3. **팀 빌딩 및 구인**: 사이트 상단 `Camp(구인 광고)` 탭에서 마음에 드는 동료 모집 공고에 지원 메시지를 발송하거나 직접 팀원 모집을 올립니다.
 4. **결과물 제출**: 해커톤 당일 양식에 맞춰 팀 결과물(도출 파일/깃허브)을 입력 폼을 통해 제출하고 리더보드 랭크를 대기합니다.
+
+---
+
+## ☁️ 배포 가이드 (Deployment Guide)
+
+이 프로젝트는 프론트엔드와 백엔드를 물리적으로 분리하여 배포하는 방식을 권장합니다. 환경 변수 연동을 통해 두 서버 간 통신을 연결합니다.
+
+### 1단계: 백엔드 (Render.com 배포)
+FastAPI 서버를 클라우드 환경에 세팅하여 API와 데이터를 제공합니다.
+1. [Render.com](https://render.com) 에 접속 후 **Web Service**를 생성합니다.
+2. GitHub 저장소를 연결하고 아래와 같이 설정합니다:
+   - **Root Directory**: `backend`
+   - **Environment**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+3. 배포가 완료되면 부여받은 URL(예: `https://...onrender.com`)을 복사해 둡니다.
+
+### 2단계: 프론트엔드 (Vercel 배포)
+React(Vite) 애플리케이션을 Vercel에 호스팅합니다.
+1. Vercel 대시보드에서 해당 저장소를 Import 합니다.
+2. 배포 설정에서 **Root Directory**를 `frontend`로 지정합니다.
+3. **Environment Variables**(환경 변수)에 다음 값을 추가합니다:
+   - `VITE_API_URL`: 앞서 복사한 Render 백엔드 주소 (가장 끝에 `/api`를 포함하지 마시고 도메인까지만 혹은 도메인 뒤 `/api` 확인 후 용도에 맞게 기입 필요. 본 템플릿의 경우 `/api`를 소스 코드 내에서 자동 첨부하므로 기본 도메인만 부여 시 문제 발생. 코드 확인 요망) 
+   *(참고: `frontend/src/services/api.js` 코드를 보면, VITE_API_URL 값을 그대로 가져와 쓰므로, 배포된 도메인까지만 넣는 등 프로젝트 상황에 맞게 `https://...onrender.com` 을 설정합니다.)*
+4. 배포(Deploy) 버튼을 클릭하여 마무리합니다.
