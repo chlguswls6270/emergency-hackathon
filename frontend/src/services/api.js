@@ -172,5 +172,24 @@ export const apiConfig = {
     offers = offers.map(o => o.id === offerId ? { ...o, status } : o);
     setLocalItem(key, offers);
     return { success: true };
+  },
+
+  // Hackathon participation specific endpoints
+  getParticipations() {
+    return getLocalItem('my_participations', []);
+  },
+  participateInHackathon(hackathon) {
+    const list = this.getParticipations();
+    if (!list.find(h => h.slug === hackathon.slug)) {
+      list.push({ slug: hackathon.slug, title: hackathon.title, joinedAt: new Date().toISOString() });
+      setLocalItem('my_participations', list);
+    }
+    return { success: true };
+  },
+  cancelParticipation(slug) {
+    let list = this.getParticipations();
+    list = list.filter(h => h.slug !== slug);
+    setLocalItem('my_participations', list);
+    return { success: true };
   }
 };

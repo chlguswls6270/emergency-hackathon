@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { apiConfig } from '../services/api';
 import CampCard from '../components/CampCard';
 import { LoadingState, EmptyState, ErrorState } from '../components/StateComponents';
@@ -62,11 +63,17 @@ const Camp = () => {
   const filteredCamps = selectedTag === 'All' ? camps : camps.filter(c => (c.hackathonSlug || 'global') === selectedTag);
 
   return (
-    <div style={{ marginTop: '2rem' }}>
-      <Link to="/" style={{ color: 'var(--accent-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>
+    <motion.div 
+      initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }} 
+      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} 
+      exit={{ opacity: 0, y: -20, filter: 'blur(10px)' }} 
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{ marginTop: '2rem' }}
+    >
+      <Link to="/" style={{ color: 'var(--text-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block', borderBottom: '1px solid var(--text-primary)' }}>
         ← 홈으로 돌아가기
       </Link>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+      <h1 className="magical-title" style={{ fontSize: '3rem', marginBottom: '1rem', borderBottom: '4px solid var(--text-primary)', paddingBottom: '0.5rem' }}>
         🤝 {hackathonSlug ? `캠프 - ${hackathonSlug}` : '글로벌 해커톤 캠프'}
       </h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
@@ -84,9 +91,9 @@ const Camp = () => {
                 onClick={() => setSelectedTag(tag)}
                 className="tag-badge"
                 style={{ 
-                  background: selectedTag === tag ? 'var(--accent-primary)' : 'var(--glass-border)',
-                  color: selectedTag === tag ? 'white' : 'inherit',
-                  border: 'none', cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.85rem'
+                  background: selectedTag === tag ? 'var(--text-primary)' : 'transparent',
+                  color: selectedTag === tag ? 'var(--bg-primary)' : 'inherit',
+                  cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.85rem'
                 }}
               >
                 {tag === 'global' ? '글로벌 / 미분류' : tag === 'All' ? '전체' : tag}
@@ -105,16 +112,41 @@ const Camp = () => {
 
         <div className="glass-card" style={{ position: 'sticky', top: '100px' }}>
           <h2 style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>팀 만들기</h2>
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <input required type="text" placeholder="팀명" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
-            <textarea required placeholder="팀 소개" value={formData.intro} onChange={e => setFormData({...formData, intro: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white', minHeight: '80px' }} />
-            <input placeholder="모집 분야 (쉼표로 구분)" value={formData.lookingFor} onChange={e => setFormData({...formData, lookingFor: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
-            <input required type="text" placeholder="연락처 URL (Slack/Discord/Kakao)" value={formData.contact} onChange={e => setFormData({...formData, contact: e.target.value})} style={{ padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)', background: 'rgba(0,0,0,0.2)', color: 'white' }} />
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
+            <input 
+              required 
+              type="text" 
+              placeholder="팀명" 
+              value={formData.name} 
+              onChange={e => setFormData({...formData, name: e.target.value})} 
+              style={{ padding: '0.75rem', borderRadius: '0', border: '1px solid var(--border-color)' }} 
+            />
+            <textarea 
+              required 
+              placeholder="팀 소개" 
+              value={formData.intro} 
+              onChange={e => setFormData({...formData, intro: e.target.value})} 
+              style={{ padding: '0.75rem', borderRadius: '0', border: '1px solid var(--border-color)', minHeight: '80px' }} 
+            />
+            <input 
+              placeholder="모집 분야 (쉼표로 구분)" 
+              value={formData.lookingFor} 
+              onChange={e => setFormData({...formData, lookingFor: e.target.value})} 
+              style={{ padding: '0.75rem', borderRadius: '0', border: '1px solid var(--border-color)' }} 
+            />
+            <input 
+              required 
+              type="text" 
+              placeholder="연락처 URL (Slack/Discord/Kakao)" 
+              value={formData.contact} 
+              onChange={e => setFormData({...formData, contact: e.target.value})} 
+              style={{ padding: '0.75rem', borderRadius: '0', border: '1px solid var(--border-color)' }} 
+            />
             <button type="submit" className="glow-button">팀 등록</button>
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

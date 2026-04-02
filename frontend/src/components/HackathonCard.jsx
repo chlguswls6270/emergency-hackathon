@@ -6,22 +6,18 @@ const HackathonCard = ({ hackathon }) => {
   
   return (
     <Link to={`/hackathons/${slug}`} className="glass-card hackathon-card" style={{ display: 'flex', flexDirection: 'column' }}>
-      <div 
-        className="card-image"
-        style={{ 
-          height: '140px', 
-          background: `url(${thumbnailUrl}) center/cover`, 
-          borderRadius: '8px', 
-          marginBottom: '1rem', 
-          backgroundColor: 'var(--bg-secondary)' 
-        }} 
-      />
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+      <div className="portrait-wrapper" style={{ height: '180px', marginBottom: '1rem' }}>
+        <div 
+          className="portrait-img"
+          style={{ width: '100%', height: '100%', background: `url(${thumbnailUrl}) center/cover` }} 
+        />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '0.5rem' }}>
         <span className={`status-badge ${status}`}>
           {status.toUpperCase()}
         </span>
       </div>
-      <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{title}</h3>
+      <h3 className="magical-serif" style={{ fontSize: '1.4rem', marginBottom: '0.5rem', lineHeight: '1.2' }}>{title}</h3>
       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
         {tags?.map(t => (
           <span key={t} className="tag-badge">#{t}</span>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { apiConfig } from '../services/api';
 import HackathonCard from '../components/HackathonCard';
 import { LoadingState, EmptyState, ErrorState } from '../components/StateComponents';
@@ -28,11 +29,19 @@ const HackathonList = () => {
   const filteredHackathons = selectedTag === 'All' ? hackathons : hackathons.filter(h => h.tags?.includes(selectedTag));
 
   return (
-    <div style={{ marginTop: '2rem' }}>
-      <Link to="/" style={{ color: 'var(--accent-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>
+    <motion.div 
+      initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }} 
+      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} 
+      exit={{ opacity: 0, y: -20, filter: 'blur(10px)' }} 
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{ marginTop: '2rem' }}
+    >
+      <Link to="/" style={{ color: 'var(--text-primary)', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block', borderBottom: '1px solid var(--text-primary)' }}>
         ← 홈으로 돌아가기
       </Link>
-      <h1 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>🔥 해커톤 탐색</h1>
+      <h1 className="magical-title" style={{ marginBottom: '1.5rem', fontSize: '3rem', borderBottom: '4px solid var(--text-primary)', paddingBottom: '0.5rem' }}>
+        특종: 해커톤 탐색
+      </h1>
       
       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
         {allTags.map(tag => (
@@ -41,9 +50,9 @@ const HackathonList = () => {
             onClick={() => setSelectedTag(tag)}
             className="tag-badge"
             style={{ 
-              background: selectedTag === tag ? 'var(--accent-primary)' : 'var(--glass-border)',
-              color: selectedTag === tag ? 'white' : 'inherit',
-              border: 'none', cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.9rem'
+              background: selectedTag === tag ? 'var(--text-primary)' : 'transparent',
+              color: selectedTag === tag ? 'var(--bg-primary)' : 'inherit',
+              cursor: 'pointer', padding: '0.5rem 1rem', fontSize: '0.85rem'
             }}
           >
             {tag === 'All' ? '전체' : tag}
@@ -58,7 +67,7 @@ const HackathonList = () => {
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

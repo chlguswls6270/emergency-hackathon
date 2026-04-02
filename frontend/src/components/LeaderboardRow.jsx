@@ -2,28 +2,29 @@ import React from 'react';
 
 const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit, artifactFilename }) => {
   return (
-    <tr className="leaderboard-row">
-      <td style={{ padding: '1rem', fontWeight: 'bold', color: isTop3 ? 'var(--accent-primary)' : 'inherit' }}>
+    <tr className="leaderboard-row" style={{ background: isLocal ? 'rgba(0, 0, 0, 0.08)' : 'transparent' }}>
+      <td style={{ padding: '0.75rem 1rem', fontWeight: 'bold', color: isTop3 ? 'var(--accent-primary)' : 'inherit' }}>
         {rank === 1 ? '🥇 1' : rank === 2 ? '🥈 2' : rank === 3 ? '🥉 3' : rank}
       </td>
-      <td style={{ padding: '1rem', display: 'flex', alignItems: 'center' }}>
-        <span style={{ marginRight: '1rem' }}>{nickname}</span>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
+      <td style={{ padding: '0.75rem 1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', flexWrap: 'wrap', gap: '0.5rem' }}>
+          <span>{nickname}</span>
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
           {artifactFilename && (
-            <a href={`http://localhost:8000/api/download/${artifactFilename}`} download className="glow-button" style={{ padding: '0.15rem 0.5rem', fontSize: '0.75rem', background: 'transparent', border: '1px solid #3b82f6', color: '#60a5fa', textDecoration: 'none' }}>
+            <a href={`http://localhost:8000/api/download/${artifactFilename}`} download className="glow-button" style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem', textDecoration: 'none' }}>
               ⬇ 다운로드
             </a>
           )}
           {isLocal && onUndo && (
             <button 
               onClick={() => onUndo(nickname)} 
-              style={{ background: 'transparent', border: '1px solid #ef4444', color: '#ef4444', cursor: 'pointer', borderRadius: '4px', padding: '0.15rem 0.5rem', fontSize: '0.75rem', transition: 'background 0.2s' }}
-              onMouseEnter={(e) => { e.target.style.background = 'rgba(239, 68, 68, 0.1)'; }}
-              onMouseLeave={(e) => { e.target.style.background = 'transparent'; }}
+              className="glow-button danger-btn"
+              style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem' }}
             >
               제출 취소
             </button>
           )}
+          </div>
         </div>
       </td>
       <td style={{ padding: '1rem', textAlign: 'right', fontWeight: 'bold' }}>
