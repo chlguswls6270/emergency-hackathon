@@ -28,6 +28,7 @@ const HackathonDetail = () => {
   const [submitNotes, setSubmitNotes] = useState('');
   const [teamCode, setTeamCode] = useState('');
   const [submitFile, setSubmitFile] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -56,19 +57,27 @@ const HackathonDetail = () => {
     if (!teamCode) return alert('팀 코드를 입력해주세요');
     if (!submitFile) return alert('제출할 파일을 첨부해주세요');
     
-    const formData = new FormData();
-    formData.append('hackathonSlug', slug);
-    formData.append('teamCode', teamCode);
-    formData.append('notes', submitNotes);
-    formData.append('file', submitFile);
+    setIsSubmitting(true);
+    
+    try {
+      const formData = new FormData();
+      formData.append('hackathonSlug', slug);
+      formData.append('teamCode', teamCode);
+      formData.append('notes', submitNotes);
+      formData.append('file', submitFile);
 
-    await apiConfig.submitProject(slug, formData);
-    const updatedLeaderboard = await apiConfig.fetchLeaderboard(slug);
-    setLeaderboard(updatedLeaderboard);
-    setSubmitNotes('');
-    setTeamCode('');
-    setSubmitFile(null);
-    alert('프로젝트가 성공적으로 제출되었습니다!');
+      await apiConfig.submitProject(slug, formData);
+      const updatedLeaderboard = await apiConfig.fetchLeaderboard(slug);
+      setLeaderboard(updatedLeaderboard);
+      setSubmitNotes('');
+      setTeamCode('');
+      setSubmitFile(null);
+      alert('프로젝트가 성공적으로 제출되었습니다!');
+    } catch (err) {
+      alert('오류가 발생했습니다. 다시 시도해주세요.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCampDelete = async (teamCode) => {
@@ -213,7 +222,9 @@ const HackathonDetail = () => {
                 onChange={e => setSubmitNotes(e.target.value)}
                 style={{ padding: '0.75rem', borderRadius: '0', border: '1px solid var(--border-color)', minHeight: '80px' }} 
               />
-              <button type="submit" className="glow-button">대시보드에 제출</button>
+              <button type="submit" disabled={isSubmitting} className={isSubmitting ? "glow-button submitting" : "glow-button"} style={{ opacity: isSubmitting ? 0.7 : 1 }}>
+                {isSubmitting ? '부엉이가 문서를 나르는 중... 🦉' : '대시보드에 제출'}
+              </button>
             </form>
           </Section>
         </div>

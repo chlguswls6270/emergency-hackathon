@@ -26,24 +26,31 @@ const Camp = () => {
     });
   }, [hackathonSlug]);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await apiConfig.createCamp({ 
-      name: formData.name, 
-      intro: formData.intro, 
-      hackathonSlug: hackathonSlug || 'global',
-      isOpen: true,
-      lookingFor: formData.lookingFor.split(','),
-      contact: { type: 'link', url: formData.contact },
-      memberCount: 1,
-      createdAt: new Date().toISOString()
-    });
-    alert('팀 등록이 완료되었습니다!');
-    
-    // Refresh camps list without full reload
-    const updatedCamps = await apiConfig.fetchCampData(hackathonSlug);
-    setCamps(updatedCamps);
-    setFormData({ name: '', intro: '', lookingFor: '', contact: '' });
+    setIsSubmitting(true);
+    try {
+      await apiConfig.createCamp({ 
+        name: formData.name, 
+        intro: formData.intro, 
+        hackathonSlug: hackathonSlug || 'global',
+        isOpen: true,
+        lookingFor: formData.lookingFor.split(','),
+        contact: { type: 'link', url: formData.contact },
+        memberCount: 1,
+        createdAt: new Date().toISOString()
+      });
+      alert('팀 등록이 완료되었습니다!');
+      
+      // Refresh camps list without full reload
+      const updatedCamps = await apiConfig.fetchCampData(hackathonSlug);
+      setCamps(updatedCamps);
+      setFormData({ name: '', intro: '', lookingFor: '', contact: '' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleDelete = async (teamCode) => {
@@ -142,7 +149,9 @@ const Camp = () => {
               onChange={e => setFormData({...formData, contact: e.target.value})} 
               style={{ padding: '0.75rem', borderRadius: '0', border: '1px solid var(--border-color)' }} 
             />
-            <button type="submit" className="glow-button">팀 등록</button>
+            <button type="submit" disabled={isSubmitting} className="glow-button" style={{ opacity: isSubmitting ? 0.7 : 1 }}>
+              {isSubmitting ? '파티 결성 요청 중... 📜' : '팀 등록'}
+            </button>
           </form>
         </div>
       </div>
