@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import OwlSendModal from './OwlSendModal';
 
 const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit, artifactFilename }) => {
+  const [showOwlModal, setShowOwlModal] = useState(false);
+
   return (
+    <>
     <tr className="leaderboard-row" style={{ background: isLocal ? 'rgba(0, 0, 0, 0.08)' : 'transparent' }}>
       <td style={{ padding: '0.75rem 1rem', fontWeight: 'bold', color: isTop3 ? 'var(--accent-primary)' : 'inherit' }}>
         {rank === 1 ? '🥇 1' : rank === 2 ? '🥈 2' : rank === 3 ? '🥉 3' : rank}
@@ -24,6 +28,13 @@ const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit,
               제출 취소
             </button>
           )}
+          <button 
+            onClick={() => setShowOwlModal(true)} 
+            className="glow-button"
+            style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem', border: '1px solid #5a4b3c', background: '#f4ecd8', color: '#5a4b3c' }}
+          >
+            🦉 편지쓰기
+          </button>
           </div>
         </div>
       </td>
@@ -32,6 +43,12 @@ const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit,
         {unit && <span style={{ marginLeft: '0.2rem', fontSize: '0.85em', color: 'var(--text-secondary)', fontWeight: 'normal' }}>{unit}</span>}
       </td>
     </tr>
+    <OwlSendModal 
+      isOpen={showOwlModal} 
+      onClose={() => setShowOwlModal(false)} 
+      targetTeam={nickname} 
+    />
+    </>
   );
 };
 

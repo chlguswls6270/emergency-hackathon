@@ -9,6 +9,7 @@ import HackathonCard from './components/HackathonCard';
 import CampCard from './components/CampCard';
 import { LoadingState } from './components/StateComponents';
 import { apiConfig } from './services/api';
+import OwlPostBox from './components/OwlPostBox';
 
 const Home = () => {
   const [hackathons, setHackathons] = useState([]);
@@ -178,6 +179,7 @@ function App() {
           </Routes>
         </AnimatePresence>
       </main>
+      <OwlPostBox />
     </div>
   );
 }

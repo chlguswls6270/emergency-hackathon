@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { apiConfig } from '../services/api';
+import OwlSendModal from './OwlSendModal';
 
 const CampCard = ({ camp, onDelete }) => {
   const { name, isOpen, intro, lookingFor, contact, teamCode, hackathonSlug } = camp;
@@ -9,6 +10,7 @@ const CampCard = ({ camp, onDelete }) => {
   const [offers, setOffers] = useState([]);
   const [showInviteForm, setShowInviteForm] = useState(false);
   const [inviteSender, setInviteSender] = useState('');
+  const [showOwlModal, setShowOwlModal] = useState(false);
 
   useEffect(() => {
     if (isLocal) {
@@ -76,15 +78,18 @@ const CampCard = ({ camp, onDelete }) => {
         {!isLocal ? (
           <div style={{ width: '100%', overflow: 'hidden' }}>
             {!showInviteForm ? (
-              <button onClick={() => setShowInviteForm(true)} className="glow-button" style={{ display: 'block', width: '100%', boxSizing: 'border-box', textAlign: 'center', padding: '0.5rem', fontSize: '0.9rem' }}>
+              <button onClick={() => setShowInviteForm(true)} className="glow-button" style={{ display: 'block', width: '100%', boxSizing: 'border-box', textAlign: 'center', padding: '0.4rem', fontSize: '0.85rem', marginBottom: '0.5rem' }}>
                 초대 / 제안 보내기
               </button>
             ) : (
-              <form onSubmit={handleSendOffer} style={{ display: 'flex', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
+              <form onSubmit={handleSendOffer} style={{ display: 'flex', gap: '0.5rem', width: '100%', boxSizing: 'border-box', marginBottom: '0.5rem' }}>
                 <input required placeholder="이름 또는 팀명" value={inviteSender} onChange={e => setInviteSender(e.target.value)} style={{ flex: 1, minWidth: 0, padding: '0.5rem', border: '1px solid var(--border-color)', fontSize: '0.85rem', boxSizing: 'border-box' }} />
-                <button type="submit" className="glow-button" style={{ flexShrink: 0, padding: '0.5rem 1rem', fontSize: '0.85rem', boxSizing: 'border-box' }}>전송</button>
+                <button type="submit" className="glow-button" style={{ flexShrink: 0, padding: '0.5rem 1rem', fontSize: '0.85rem', boxSizing: 'border-box' }}>등록</button>
               </form>
             )}
+            <button onClick={() => setShowOwlModal(true)} className="glow-button" style={{ display: 'block', width: '100%', backgroundColor: '#5a4b3c', color: '#f4ecd8', border: 'none', boxSizing: 'border-box', textAlign: 'center', padding: '0.5rem', fontSize: '0.9rem' }}>
+              비밀 부엉이 편지 보내기 🦉
+            </button>
           </div>
         ) : (
           <div style={{ border: '2px dashed var(--border-color)', padding: '0.75rem' }}>
@@ -109,6 +114,12 @@ const CampCard = ({ camp, onDelete }) => {
           </div>
         )}
       </div>
+
+      <OwlSendModal 
+        isOpen={showOwlModal} 
+        onClose={() => setShowOwlModal(false)} 
+        targetTeam={name || teamCode} 
+      />
     </div>
   );
 };

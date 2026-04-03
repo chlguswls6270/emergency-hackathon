@@ -18,11 +18,29 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+import uuid
+
 # Load data paths
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / "data" / "예시자료"
 UPLOAD_DIR = BASE_DIR / "backend" / "uploads"
+OWLS_FILE = BASE_DIR / "backend" / "data" / "owls.json"
+
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+os.makedirs(OWLS_FILE.parent, exist_ok=True)
+
+def get_owls() -> List[dict]:
+    if not OWLS_FILE.exists():
+        return []
+    with open(OWLS_FILE, "r", encoding="utf-8") as f:
+        try:
+            return json.load(f)
+        except Exception:
+            return []
+
+def save_owls(owls: List[dict]):
+    with open(OWLS_FILE, "w", encoding="utf-8") as f:
+        json.dump(owls, f, indent=2, ensure_ascii=False)
 
 def load_json(filename: str):
     filepath = DATA_DIR / filename
@@ -183,6 +201,65 @@ def create_submission(
         "filename": file.filename,
         "teamCode": teamCode
     }
+
+# ---------------------------------------------------------------------------
+# OWL POST (부엉이 우체국) Endpoints
+# ---------------------------------------------------------------------------
+class OwlMessage(BaseModel):
+    to_team: str
+    from_name: str
+    message: str
+
+@app.post("/api/owls/send", summary="Send an Owl Post message")
+def send_owl(payload: OwlMessage):
+    owls = get_owls()
+    new_owl = {
+        "id": str(uuid.uuid4()),
+        "to_team": payload.to_team,
+        "from_name": payload.from_name,
+        "message": payload.message,
+        "is_read": False,
+        "timestamp": datetime.now().isoformat()
+    }
+    owls.append(new_owl)
+    save_owls(owls)
+    return {"success": True, "owl_id": new_owl["id"]}
+
+@app.get("/api/owls/receive/{team_code}", summary="Get all Owl Post messages for a team")
+def get_my_owls(team_code: str):
+    owls = get_owls()
+    # Filter for the team, or 'global' just as a showcase test
+    my_owls = [o for o in owls if o["to_team"] == team_code]
+    return my_owls
+
+@app.post("/api/owls/{owl_id}/read", summary="Mark an Owl Post as read")
+def mark_owl_read(owl_id: str):
+    owls = get_owls()
+    found = False
+    for o in owls:
+        if o["id"] == owl_id:
+            o["is_read"] = True
+            found = True
+            break
+    if found:
+        save_owls(owls)
+    return {"success": found}
+
+@app.delete("/api/owls/{owl_id}", summary="Delete an Owl Post message")
+def delete_owl(owl_id: str):
+    owls = get_owls()
+    new_owls = [o for o in owls if o["id"] != owl_id]
+    if len(new_owls) < len(owls):
+        save_owls(new_owls)
+        return {"success": True}
+    return {"success": False, "detail": "Owl not found"}
+
+@app.delete("/api/owls/clear/{team_code}", summary="Delete all Owl Post messages for a team")
+def clear_owls(team_code: str):
+    owls = get_owls()
+    new_owls = [o for o in owls if o["to_team"] != team_code]
+    save_owls(new_owls)
+    return {"success": True, "deleted": len(owls) - len(new_owls)}
 
 @app.get("/api/download/{filename}", summary="Download submitted artifact")
 def download_file(filename: str):

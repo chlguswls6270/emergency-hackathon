@@ -194,5 +194,69 @@ export const apiConfig = {
     list = list.filter(h => h.slug !== slug);
     setLocalItem('my_participations', list);
     return { success: true };
+  },
+
+  // ----------------------------------------------------
+  // Owl Post (부엉이 우체국)
+  // ----------------------------------------------------
+  async sendOwl(toTeam, fromName, message) {
+    try {
+      const res = await fetch(`${API_BASE}/owls/send`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ to_team: toTeam, from_name: fromName, message })
+      });
+      return await res.json();
+    } catch (e) {
+      console.error("Failed to send owl", e);
+      return { success: false };
+    }
+  },
+
+  async fetchOwls(teamCode) {
+    if (!teamCode) return [];
+    try {
+      const res = await fetch(`${API_BASE}/owls/receive/${teamCode}`);
+      if (!res.ok) return [];
+      return await res.json();
+    } catch (e) {
+      console.error("Failed to fetch owls", e);
+      return [];
+    }
+  },
+
+  async markOwlRead(owlId) {
+    try {
+      const res = await fetch(`${API_BASE}/owls/${owlId}/read`, {
+        method: 'POST'
+      });
+      return await res.json();
+    } catch (e) {
+      return { success: false };
+    }
+  },
+
+  async deleteOwl(owlId) {
+    try {
+      const res = await fetch(`${API_BASE}/owls/${owlId}`, {
+        method: 'DELETE'
+      });
+      return await res.json();
+    } catch (e) {
+      console.error("Failed to delete owl", e);
+      return { success: false };
+    }
+  },
+
+  async clearOwls(teamCode) {
+    try {
+      const res = await fetch(`${API_BASE}/owls/clear/${teamCode}`, {
+        method: 'DELETE'
+      });
+      return await res.json();
+    } catch (e) {
+      console.error("Failed to clear owls", e);
+      return { success: false };
+    }
   }
 };
