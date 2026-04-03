@@ -74,15 +74,15 @@ const CampCard = ({ camp, onDelete }) => {
         </a>
 
         {!isLocal ? (
-          <div>
+          <div style={{ width: '100%', overflow: 'hidden' }}>
             {!showInviteForm ? (
-              <button onClick={() => setShowInviteForm(true)} className="glow-button" style={{ display: 'block', width: '100%', textAlign: 'center', padding: '0.5rem', fontSize: '0.9rem' }}>
+              <button onClick={() => setShowInviteForm(true)} className="glow-button" style={{ display: 'block', width: '100%', boxSizing: 'border-box', textAlign: 'center', padding: '0.5rem', fontSize: '0.9rem' }}>
                 초대 / 제안 보내기
               </button>
             ) : (
-              <form onSubmit={handleSendOffer} style={{ display: 'flex', gap: '0.5rem' }}>
-                <input required placeholder="이름 또는 팀명" value={inviteSender} onChange={e => setInviteSender(e.target.value)} style={{ flex: 1, padding: '0.5rem', border: '1px solid var(--border-color)', fontSize: '0.8rem' }} />
-                <button type="submit" className="glow-button" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem' }}>전송</button>
+              <form onSubmit={handleSendOffer} style={{ display: 'flex', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
+                <input required placeholder="이름 또는 팀명" value={inviteSender} onChange={e => setInviteSender(e.target.value)} style={{ flex: 1, minWidth: 0, padding: '0.5rem', border: '1px solid var(--border-color)', fontSize: '0.85rem', boxSizing: 'border-box' }} />
+                <button type="submit" className="glow-button" style={{ flexShrink: 0, padding: '0.5rem 1rem', fontSize: '0.85rem', boxSizing: 'border-box' }}>전송</button>
               </form>
             )}
           </div>
