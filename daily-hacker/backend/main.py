@@ -1,8 +1,11 @@
 import json
 import os
-import shutil
+import re
+import threading
+from uuid import uuid4
 from pathlib import Path
-from fastapi import FastAPI, HTTPException, UploadFile, File, Form
+from fastapi import Depends, FastAPI, HTTPException, UploadFile, File, Form
+from .security import BodyLimitMiddleware, require_access
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -10,10 +13,11 @@ from typing import List, Optional
 
 app = FastAPI(title="Emergency Hackathon API", description="Provides Mock JSON Data for the Frontend")
 
+app.add_middleware(BodyLimitMiddleware, max_bytes=10 * 1024 * 1024 + 65_536)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # For hackathon simplicity
-    allow_credentials=True,
+    allow_origins=[origin.strip() for origin in os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",") if origin.strip()],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -27,7 +31,12 @@ if IS_VERCEL:
     UPLOAD_DIR = Path("/tmp/uploads")
 else:
     UPLOAD_DIR = BASE_DIR / "backend" / "uploads"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+UPLOAD_DIR = UPLOAD_DIR.resolve()
+UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+MAX_STORAGE_BYTES = 100 * 1024 * 1024
+ALLOWED_EXTENSIONS = {".zip", ".pdf", ".txt", ".csv", ".json", ".png", ".jpg", ".jpeg"}
+_upload_lock = threading.Lock()
 
 def load_json(filename: str):
     filepath = DATA_DIR / filename
@@ -171,31 +180,60 @@ def get_rankings(days: Optional[int] = None):
 
     return rankings
 
-@app.post("/api/submit", summary="Mock submission endpoint with file upload")
+@app.post("/api/submit", summary="Private demo submission", dependencies=[Depends(require_access)])
 def create_submission(
-    teamCode: str = Form(...),
-    hackathonSlug: str = Form(...),
-    notes: Optional[str] = Form(None),
+    teamCode: str = Form(..., min_length=1, max_length=100),
+    hackathonSlug: str = Form(..., min_length=1, max_length=100),
+    notes: Optional[str] = Form(None, max_length=8000),
     file: UploadFile = File(...)
 ):
-    file_location = UPLOAD_DIR / file.filename
-    with open(file_location, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-    
+    suffix = Path(file.filename or "").suffix.lower()
+    if suffix not in ALLOWED_EXTENSIONS:
+        raise HTTPException(400, "지원하지 않는 파일 형식입니다.")
+    # Ignore the client path entirely. Each upload gets an unguessable storage ID.
+    stored_name = uuid4().hex + suffix
+    file_location = UPLOAD_DIR / stored_name
+    try:
+        with _upload_lock:
+            used = sum(p.stat().st_size for p in UPLOAD_DIR.iterdir() if p.is_file())
+            size = 0
+            try:
+                with file_location.open("xb") as buffer:
+                    while chunk := file.file.read(1024 * 1024):
+                        size += len(chunk)
+                        if size > MAX_UPLOAD_BYTES:
+                            raise HTTPException(413, "파일은 10 MiB 이하여야 합니다.")
+                        if used + size > MAX_STORAGE_BYTES:
+                            raise HTTPException(507, "업로드 저장 공간이 부족합니다.")
+                        buffer.write(chunk)
+            except Exception:
+                file_location.unlink(missing_ok=True)
+                raise
+    finally:
+        file.file.close()
+
     return {
-        "status": "success", 
-        "message": "Submission received", 
-        "filename": file.filename,
+        "status": "success",
+        "message": "Submission received",
+        "filename": stored_name,
         "teamCode": teamCode
     }
 
-@app.get("/api/download/{filename}", summary="Download submitted artifact")
+
+@app.get("/api/download/{filename}", summary="Download demo artifact", dependencies=[Depends(require_access)])
 def download_file(filename: str):
+    if not re.fullmatch(r"[0-9a-f]{32}\.(zip|pdf|txt|csv|json|png|jpg|jpeg)", filename):
+        raise HTTPException(404, "File not found")
     file_path = UPLOAD_DIR / filename
-    if not file_path.exists():
-         raise HTTPException(status_code=404, detail="File not found")
-    return FileResponse(file_path, filename=filename)
+    if file_path.is_symlink() or file_path.resolve().parent != UPLOAD_DIR or not file_path.is_file():
+        raise HTTPException(404, "File not found")
+    return FileResponse(
+        file_path, filename=filename, media_type="application/octet-stream",
+        headers={"X-Content-Type-Options": "nosniff", "Cache-Control": "no-store"},
+    )
+
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("backend.main:app", host="127.0.0.1", port=8000, reload=True)
+

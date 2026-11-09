@@ -1,4 +1,5 @@
 import React from 'react';
+import { apiConfig } from '../services/api';
 
 const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit, artifactFilename }) => {
   return (
@@ -11,9 +12,9 @@ const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit,
           <span>{nickname}</span>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
           {artifactFilename && (
-            <a href={`http://localhost:8000/api/download/${artifactFilename}`} download className="glow-button" style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem', textDecoration: 'none' }}>
+            <button type="button" onClick={() => apiConfig.downloadArtifact(artifactFilename).catch(() => window.alert('파일을 다운로드하지 못했습니다.'))} className="glow-button" style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem', textDecoration: 'none' }}>
               ⬇ 다운로드
-            </a>
+            </button>
           )}
           {isLocal && onUndo && (
             <button 
@@ -36,3 +37,4 @@ const LeaderboardRow = ({ rank, nickname, points, isTop3, isLocal, onUndo, unit,
 };
 
 export default LeaderboardRow;
+
