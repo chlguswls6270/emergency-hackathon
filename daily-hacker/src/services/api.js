@@ -1,14 +1,10 @@
+import { protectedFetch } from './protectedFetch';
+
 // API Service separating endpoints and frontend
 // Base URL from the FastAPI server, but can mock data directly if Backend is down.
 
 const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-<<<<<<< HEAD:daily-hacker/src/services/api.js
-const API_BASE = IS_LOCAL ? 'http://localhost:8000/api' : '/api';
-=======
-const API_BASE = IS_LOCAL 
-  ? 'http://localhost:8000/api' 
-  : (import.meta.env.VITE_API_URL || 'https://emergency-hackathon.onrender.com/api');
->>>>>>> new-start:frontend/src/services/api.js
+const API_BASE = import.meta.env.VITE_API_URL || (IS_LOCAL ? 'http://localhost:8000/api' : '/api');
 
 // localStorage Helpers
 export const getLocalItem = (key, defaultVal) => {
@@ -30,6 +26,18 @@ export const setLocalItem = (key, value) => {
 
 // Services
 export const apiConfig = {
+  async downloadArtifact(filename) {
+    const res = await protectedFetch(`${API_BASE}/download/${encodeURIComponent(filename)}`);
+    if (!res.ok) throw new Error('파일을 다운로드하지 못했습니다.');
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  },
+
   async fetchRankings(days = null) {
     try {
       const qs = days ? `?days=${days}` : '';
@@ -123,12 +131,13 @@ export const apiConfig = {
     const key = `local_subs_${hackathonSlug}`;
     const locals = getLocalItem(key, []);
     try {
-      const res = await fetch(`${API_BASE}/submit`, {
+      const res = await protectedFetch(`${API_BASE}/submit`, {
         method: 'POST',
         body: formData // No custom headers, let browser set boundary automatically
       });
       const data = await res.json();
-      
+      if (!res.ok) throw new Error(typeof data.detail === 'string' ? data.detail : '제출에 실패했습니다.');
+
       locals.push({
         rank: '-', 
         teamName: data.teamCode || formData.get('teamCode'), 
@@ -200,3 +209,4 @@ export const apiConfig = {
     return { success: true };
   }
 };
+
