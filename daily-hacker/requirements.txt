@@ -1,2 +1,6 @@
--r backend/requirements.txt
-
+fastapi==0.135.3
+uvicorn==0.43.0
+pydantic==2.12.5
+python-multipart==0.0.31
+starlette==1.10.0
+anyio==4.16.0
